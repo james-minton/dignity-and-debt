@@ -1,5 +1,9 @@
 // Font
 @import url('https://fonts.googleapis.com/css?family=Lato:400|Open+Sans:400,700');
+// TODO: Adobe Caslon
+// TODO: $brandongrotesque-bold
+// $brandongrotesque-med
+// $brandongrotesque-reg
 
 // Bootstrap
 @import 'bootstrap/functions';
@@ -11,30 +15,42 @@
 @import 'bootstrap/grid';
 @import 'bootstrap/type';
 @import 'bootstrap/tables';
-// @import "bootstrap/images";
-// @import "bootstrap/code";
-// @import "bootstrap/forms";
-// @import "bootstrap/buttons";
-// @import "bootstrap/transitions";
-// @import "bootstrap/dropdown";
-// @import "bootstrap/button-group";
-// @import "bootstrap/input-group";
-// @import "bootstrap/custom-forms";
+@import "bootstrap/images";
+@import "bootstrap/code";
+@import "bootstrap/forms";
+@import "bootstrap/buttons";
+@import "bootstrap/transitions";
+@import "bootstrap/dropdown";
+@import "bootstrap/button-group";
+@import "bootstrap/input-group";
+@import "bootstrap/custom-forms";
 @import "bootstrap/nav";
 @import "bootstrap/navbar";
 @import "bootstrap/card";
 @import "bootstrap/breadcrumb";
-// @import "bootstrap/pagination";
-// @import "bootstrap/badge";
-// @import "bootstrap/jumbotron";
-// @import "bootstrap/alert";
-// @import "bootstrap/progress";
-// @import "bootstrap/media";
-// @import "bootstrap/list-group";
-// @import "bootstrap/close";
-// @import "bootstrap/modal";
-// @import "bootstrap/tooltip";
-// @import "bootstrap/popover";
-// @import "bootstrap/carousel";
-// @import "bootstrap/print";
+@import "bootstrap/pagination";
+@import "bootstrap/badge";
+@import "bootstrap/jumbotron";
+@import "bootstrap/alert";
+@import "bootstrap/progress";
+@import "bootstrap/media";
+@import "bootstrap/list-group";
+@import "bootstrap/close";
+@import "bootstrap/modal";
+@import "bootstrap/tooltip";
+@import "bootstrap/popover";
+@import "bootstrap/carousel";
+@import "bootstrap/print";
 @import 'bootstrap/utilities';
+
+
+h1 {
+  font-family: $brandongrotesque-bold;
+}
+h2,
+h3,
+h4,
+h5,
+nav a {
+  font-family: $brandongrotesque-med;
+}

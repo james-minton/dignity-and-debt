@@ -3,7 +3,70 @@
 <div id="home-jumbotron" class="jumbotron text-center">
   <h1 tabindex="0">{{ .Site.Title }}</h1>
   <p class="font-125">{{ .Site.Params.homeText | markdownify }}</p>
-  <p tabindex="0">{{ .Page.Params.subtitle }}</p>
+  <h2 tabindex="0">{{ .Page.Params.subtitle }}</h2>
+</div>
+
+<h3>Objectives</h3>
+<div class="objectives">
+  {{ range .Site.Data.objectives }}
+  <h4>{{ .display_number }}</h4>
+  <h5>{{ .title }}</h5>
+  <p>{{ .blurb }}</p>
+  <p>{{ .image }}</p>
+  {{ $img := .image }}
+  <p>{{ $img }}</p>
+  {{ $imgpath := .image }}
+  {{ with $.Site.GetPage "page" "img/_index.md" }}
+      <p>{{ .Title }}</p>
+      {{ $resourcesArray := .Resources.ByType "image"}}
+      <p>{{$resourcesArray}}</p>
+      <p>{{ $img }}</p>
+      {{ with .Resources.GetMatch $img }}
+            {{$img400 := .Fill "800x400 Center"}}
+            <img src="{{ $img400.RelPermalink }}">
+        {{ end }}
+  {{ end }}
+
+  {{ with .Site.GetPage "section" "img" }}
+    <h2>{{ .Title }}</h2>
+    {{ $resources := .Resources.ByType "image"}}
+    {{ range $resources }}
+      {{ with . }}
+        <img style="max-width: 100%;" src="{{ .RelPermalink }}">
+        <br />
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ with .Site.GetPage "section" "img" }}
+    {{ with .Resources.GetByPrefix $img }}
+      {{ $image200x := (.Resize "200x") }}
+      {{ $image400x := (.Resize "400x") }}
+      <img src="{{ $image200x.RelPermalink }}">
+      <img src="{{ $image400x.RelPermalink }}">
+      <br />
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+
+
+</div>
+
+<h3>Upcoming Events</h3>
+<div class="events">
+{{ range where .Site.Pages "Section" "events"  }}
+  {{ range first 3 (where .Pages "Date.Unix" "gt" now.Unix) }}
+  {{ $dateTime := .PublishDate.Format "2006-01-02" }}
+  {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+<div>
+    <time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
+  <a class="font-125" href="{{ .Permalink }}">{{ .Title }}</a>
+  <p>{{ .Content }}</p>
+  {{ partial "news-date-and-tags.html" . }}
+</div>
+  {{ end }}
+{{ end }}
 </div>
 
 {{ end }}
