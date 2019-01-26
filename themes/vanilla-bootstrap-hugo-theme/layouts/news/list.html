@@ -1,0 +1,43 @@
+{{ define "main" }}
+
+<h1>{{ .Title }}</h1>
+
+<h2>{{ .Title }}</h2>
+<div class="list-news">
+{{ range where .Pages "Date.Unix" "lt" now.Unix  }}
+<div>
+  <a class="font-125" href="{{ .Permalink }}">{{ .Title }}</a>
+  <span>{{ .Content }}</span>
+  {{ partial "news-date-and-tags.html" . }}
+</div>
+{{ end }}
+</div>
+
+<!-- <h2>Upcoming Events</h2>
+<div class="list-upcoming-events">
+{{ range where .Pages "Date.Unix" "gt" now.Unix }}
+<div>
+  <a class="font-125" href="{{ .Permalink }}">{{ .Title }}</a>
+  <br>
+  {{ partial "date-and-tags.html" . }}
+</div>
+{{ end }}
+</div> -->
+
+<h2>Upcoming Events 2</h2>
+<div class="list-upcoming-events-def">
+{{ range where .Site.Pages "Section" "events"  }}
+  {{ range where .Pages "Date.Unix" "gt" now.Unix  }}
+  {{ $dateTime := .PublishDate.Format "2006-01-02" }}
+  {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+<div>
+  <time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
+  <a class="font-125" href="{{ .Permalink }}">{{ .Title }}</a>
+  <p>{{ .Content }}</p>
+  {{ partial "news-date-and-tags.html" . }}
+</div>
+  {{ end }}
+{{ end }}
+</div>
+
+{{ end }}

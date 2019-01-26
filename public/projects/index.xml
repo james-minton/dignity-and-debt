@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Dignity and Debt</title>
+    <link>/projects/</link>
+    <description>Recent content in Projects on Dignity and Debt</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 25 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>This is a project, project 1</title>
+      <link>/projects/new-project-item-01/</link>
+      <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/new-project-item-01/</guid>
+      <description>This is some page content for project 1</description>
+    </item>
+    
+    <item>
+      <title>This is a project, project 2</title>
+      <link>/projects/new-project-item-02/</link>
+      <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/new-project-item-02/</guid>
+      <description>This is some page content for project 2</description>
+    </item>
+    
+    <item>
+      <title>This is a project, project 3</title>
+      <link>/projects/new-project-item-03/</link>
+      <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/new-project-item-03/</guid>
+      <description>This is some page content for project 3</description>
+    </item>
+    
+  </channel>
+</rss>
