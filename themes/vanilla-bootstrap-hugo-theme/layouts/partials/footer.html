@@ -2,6 +2,45 @@
 <footer id="footer" class="mt-auto text-center text-muted">
   <div class="container">
     {{ .Site.Params.footerText | markdownify }}
+    <div class="row contact-and-menu">
+      <div class="col-sm-4">
+        <h3 tabindex="0">Have questions?</h3>
+        <h3 tabindex="0"><a href="#">Get in touch</a></h3>
+      </div>
+      <div class="col-sm-8">
+        <div class="row">
+          <div class="col">
+            <ul class="menu">
+              <li><a tabindex="0" href="{{.Site.BaseURL}}">Home</a></li>
+              <li><a tabindex="0" href="{{ "/about/" | absURL }}">About</a></li>
+              <li><a tabindex="0" href="{{ "/projects/" | absURL }}">Projects</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <ul class="menu">
+              <li><a tabindex="0" href="{{ "/meetings/" | absURL }}">Meetings</a></li>
+              <li><a tabindex="0" href="{{ "/news/" | absURL }}">News</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row social-and-copy">
+      <div class="col-sm">
+        <!-- Social icons -->
+        <a class="social-icon" href=""><i class="fab fa-facebook-f"></i></a>
+        <a class="social-icon" href=""><i class="fab fa-twitter"></i></a>
+        <a class="social-icon" href=""><i class="fab fa-twitter"></i></a>
+        <a class="social-icon" href=""><i class="fab fa-twitter"></i></a>
+
+      </div>
+      <div class="col-sm">
+        &copy; 2018 Dignity + Debt. All rights reserved.
+      </div>
+      <div class="col-sm">
+        Site by <a href="https://www.hyperobjekt.com/" aria-haspopup="true" target="_blank">Hyperobject</a>
+      </div>
+    </div>
   </div>
 </footer>
 {{ end }}
