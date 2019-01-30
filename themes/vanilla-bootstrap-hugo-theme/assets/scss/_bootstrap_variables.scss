@@ -23,13 +23,15 @@ $jumbotron-padding: 0;
 
 $white: #ffffff;
 $black: #000000;
+$aqua: #C9E9EA;
+$darkblue: #0A3D5F;
 $primary: #1c3ed3;
 $secondary: #43454d;
 
 // Links
-$link-color: $primary;
+$link-color: $white; // $primary;
 $link-decoration: none;
-$link-hover-color: lighten($primary, 20%);
+$link-hover-color: $aqua; // lighten($primary, 20%);
 $link-hover-decoration: underline;
 
 // Custom fonts variables
@@ -38,7 +40,8 @@ $brandongrotesque-med: 'BrandonGrotesque-Med', 'Lato', 'Helvetica Neue', Arial, 
 $brandongrotesque-reg: 'BrandonGrotesque-Reg', 'Lato', 'Helvetica Neue', Arial, sans-serif, -apple-system;
 
 // Fonts
-$font-family-base: 'Adobe Caslon Pro', 'Open Sans', 'Helvetica Neue', Arial, sans-serif,
+// TODO: Adjust once you have Adobe Caslon Pro
+$font-family-base: 'Crimson Text', 'Adobe Caslon Pro', 'Open Sans', 'Helvetica Neue', Arial, sans-serif,
   -apple-system;
 $font-family-heading: 'BrandonGrotesque-Med', 'Lato', 'Helvetica Neue', Arial, sans-serif, -apple-system;
 $font-family-sans-serif:     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;

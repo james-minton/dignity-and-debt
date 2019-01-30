@@ -4,11 +4,17 @@ title = "Dignity and Debt"
 theme = "vanilla-bootstrap-hugo-theme"
 googleAnalytics = ""
 
+[imaging]
+resampleFilter = "box"
+quality = 70
+anchor = "smart"
+
 [params]
   google_analytics_id=""
   hideFooter=false
   includeBootstrapJs=true
   containerMaxWidth=1200
+  showActiveNav=true
 
   [params.homepage_meta_tags]
     meta_description = "Hero is a multipurpose Hugo theme with fullscreen hero images and fullwidth sections. It contains content types for a business or portfolio site."

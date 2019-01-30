@@ -55,7 +55,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 body {
   margin: 0;
-  font-family: "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.6;
@@ -155,14 +155,14 @@ sup {
 }
 
 a {
-  color: #1c3ed3;
+  color: #ffffff;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
 
 a:hover {
-  color: #6a82eb;
+  color: #C9E9EA;
   text-decoration: underline;
 }
 
@@ -2663,12 +2663,12 @@ fieldset:disabled a.btn {
 
 .btn-link {
   font-weight: 400;
-  color: #1c3ed3;
+  color: #ffffff;
   background-color: transparent;
 }
 
 .btn-link:hover {
-  color: #6a82eb;
+  color: #C9E9EA;
   text-decoration: underline;
   background-color: transparent;
   border-color: transparent;
@@ -4177,13 +4177,13 @@ tbody.collapse.show {
   padding: 0.5rem 0.75rem;
   margin-left: -1px;
   line-height: 1.25;
-  color: #1c3ed3;
+  color: #ffffff;
   background-color: #ffffff;
   border: 1px solid #dee2e6;
 }
 
 .page-link:hover {
-  color: #6a82eb;
+  color: #C9E9EA;
   text-decoration: none;
   background-color: #e9ecef;
   border-color: #dee2e6;
@@ -4955,7 +4955,7 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -5068,7 +5068,7 @@ button.close {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -11091,20 +11091,17 @@ a.text-dark:hover, a.text-dark:focus {
 
 @font-face {
   font-family: 'BrandonGrotesque-Reg';
-  src: url("/fonts/brandon-grotesque/Brandon-Grotesque-Regular.ttf");
-  /* IE9 Compat Modes */
+  src: url("/fonts/brandon_grotesque/Brandon-Grotesque-Regular.ttf");
 }
 
 @font-face {
   font-family: 'BrandonGrotesque-Med';
-  src: url("/fonts/brandon-grotesque/Brandon-Grotesque-Medium.ttf");
-  /* IE9 Compat Modes */
+  src: url("/fonts/brandon_grotesque/Brandon-Grotesque-Medium.ttf");
 }
 
 @font-face {
   font-family: 'BrandonGrotesque-Bold';
-  src: url("/fonts/brandon-grotesque/Brandon-Grotesque-Bold.ttf");
-  /* IE9 Compat Modes */
+  src: url("/fonts/brandon_grotesque/Brandon-Grotesque-Bold.ttf");
 }
 
 html {
@@ -11138,13 +11135,53 @@ h3 {
   margin-left: 0;
 }
 
+nav.navbar-light {
+  padding: 0 3.2rem;
+}
+
+nav.navbar-light .navbar-brand {
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+}
+
+nav.navbar-light .navbar-nav {
+  height: 6.8rem;
+}
+
+nav.navbar-light .navbar-nav .nav-link {
+  color: #0A3D5F;
+  font-size: 1.8rem;
+  font-family: "BrandonGrotesque-Med", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  line-height: 0;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-top: 3.4rem;
+}
+
+nav.navbar-light .navbar-nav .nav-link.active, nav.navbar-light .navbar-nav .nav-link:hover {
+  border-top: 0.8rem solid #C9E9EA;
+  padding-top: 2.6rem;
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("/images/mobile-menu-dark.svg");
+}
+
+button.navbar-toggler {
+  border: 0;
+}
+
+.collapse.show {
+  height: 180px !important;
+}
+
 #footer {
   background-color: #000;
   font-family: "BrandonGrotesque-Reg", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
 }
 
 #footer .container {
-  padding-left: 4rem;
+  padding-left: 5.6rem;
 }
 
 #footer h3 {
@@ -11202,14 +11239,75 @@ h3 {
 }
 
 #footer .social-and-copy a.social-icon i {
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   width: 100%;
   text-align: center;
-  padding-top: .4rem;
+  padding-top: .6rem;
+}
+
+#footer .social-and-copy .copy,
+#footer .social-and-copy .siteby {
+  font-size: 1.2rem;
+  color: #ffffff;
+  align-self: flex-end;
 }
 
 #footer .contact-and-menu {
   padding-top: 6.4rem;
+}
+
+.jumbotron {
+  border-radius: 0;
+  background-color: transparent;
+}
+
+body.home .jumbotron {
+  height: 572px;
+}
+
+body.home .jumbotron .col-5 {
+  position: relative;
+  height: auto;
+  left: 12rem;
+  top: 24rem;
+}
+
+body.home .jumbotron img {
+  width: 308px;
+  height: 54px;
+}
+
+body.home .jumbotron h2 {
+  font-family: "BrandonGrotesque-Med", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  color: #ffffff;
+  width: 43.1rem;
+  font-size: 2.4rem;
+  line-height: 3.0rem;
+  margin-top: 3.2rem;
+}
+
+body.home #main {
+  background-color: #ffffff;
+}
+
+body.home.no-scroll nav.navbar {
+  background-color: transparent !important;
+}
+
+body.home.no-scroll nav.navbar .nav-link {
+  color: #fff;
+}
+
+body.home.no-scroll .navbar-light .navbar-toggler-icon {
+  background-image: url("/images/mobile-menu-light.svg");
+}
+
+body.home.no-scroll .navbar-brand {
+  display: none;
+}
+
+body.home.no-scroll body.home .jumbotron {
+  margin-top: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

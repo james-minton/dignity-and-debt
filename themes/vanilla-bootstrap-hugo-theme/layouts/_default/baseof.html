@@ -2,11 +2,20 @@
 {{ $lang := .Site.Language.Lang | default "en" }}
 <html lang="{{ $lang }}" class="h-100">
   {{ partial "head.html" . }}
-  <body class="h-100">
+  <body class="h-100 {{ lower .Page.Title }} {{ if eq (lower .Page.Title) "home" }}no-scroll{{ end}}">
     <!-- Removed classes "d-flex flex-column" from body element 2019-01-25 -->
-
     <div class="container parent">
+    {{ if eq (lower .Page.Title) "home" }}
       {{ partial "nav.html" . }}
+      <div id="home-jumbotron" class="jumbotron row" style="">
+        <div class="col-5">
+          <img src="{{ "images/header-logo-white.svg" | absURL }}" class="d-inline-block align-top" alt="{{ .Site.Title }} logo" aria-level="1" tabindex="0">
+          <h2 tabindex="0">{{ .Page.Params.subtitle }}</h2>
+        </div>
+      </div>
+    {{ else }}
+        {{ partial "nav.html" . }}
+    {{ end }}
       <main id="main">
         {{ block "main" . }}{{ end }}
       </main>

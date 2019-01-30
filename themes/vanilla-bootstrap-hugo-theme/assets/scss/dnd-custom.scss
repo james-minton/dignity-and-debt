@@ -1,20 +1,15 @@
-// @import url('/fonts/brandon-grotesque/Brandon-Grotesque-Regular.ttf');
-// TODO: Adobe Caslon
-// TODO: $brandongrotesque-bold
-// $brandongrotesque-med
-// $brandongrotesque-reg
-//
+// Load Brandon Grotesque ttf fonts
 @font-face {
   font-family: 'BrandonGrotesque-Reg';
-  src: url('/fonts/brandon-grotesque/Brandon-Grotesque-Regular.ttf'); /* IE9 Compat Modes */
+  src: url('/fonts/brandon_grotesque/Brandon-Grotesque-Regular.ttf');
 }
 @font-face {
   font-family: 'BrandonGrotesque-Med';
-  src: url('/fonts/brandon-grotesque/Brandon-Grotesque-Medium.ttf'); /* IE9 Compat Modes */
+  src: url('/fonts/brandon_grotesque/Brandon-Grotesque-Medium.ttf');
 }
 @font-face {
   font-family: 'BrandonGrotesque-Bold';
-  src: url('/fonts/brandon-grotesque/Brandon-Grotesque-Bold.ttf'); /* IE9 Compat Modes */
+  src: url('/fonts/brandon_grotesque/Brandon-Grotesque-Bold.ttf');
 }
 
 html {
@@ -51,16 +46,57 @@ h3 {
 
 
 // Header
-// .navbar-toggler-icon {
-//         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-// }
+nav.navbar-light {
+  padding: 0 3.2rem;
+
+  .navbar-brand {
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+  }
+
+  .navbar-nav {
+    height: 6.8rem;
+
+    .nav-link {
+      color: $darkblue;
+      font-size: 1.8rem;
+      font-family: $brandongrotesque-med;
+      line-height: 0;
+      padding-right: 2rem;
+      padding-left: 2rem;
+      padding-top: 3.4rem;
+
+      &.active,
+      &:hover {
+        border-top: .8rem solid $aqua;
+        padding-top: 2.6rem;
+      }
+
+      &:last-child {
+        // padding-right: 0;
+      }
+    }
+  }
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("/images/mobile-menu-dark.svg");
+}
+
+button.navbar-toggler {
+    border: 0;
+}
+
+.collapse.show {
+    height: 180px !important;
+}
 
 // Footer
 #footer {
   background-color: #000;
   font-family: $brandongrotesque-reg;
   .container {
-    padding-left: 4rem;
+    padding-left: 5.6rem;
   }
   h3 {
     text-align: left;
@@ -107,13 +143,21 @@ h3 {
         color: black;
         border-radius: 1.6rem;
         margin-right: 1.6rem;
+
         i {
-          font-size: 2.4rem;
+          font-size: 1.8rem;
           width: 100%;
           text-align: center;
-          padding-top: .4rem;
+          padding-top: .6rem;
         }
       }
+    }
+
+    .copy,
+    .siteby {
+      font-size: 1.2rem;
+      color: $white;
+      align-self: flex-end;
     }
   }
   .contact-and-menu {
@@ -130,6 +174,69 @@ h3 {
 // Page-specific styles
 
 // Home
+// Navbar transparent bg
+
+// Hero
+.jumbotron {
+  border-radius: 0;
+  background-color: transparent;
+}
+
+body.home {
+  .jumbotron {
+    height: 572px;
+
+    .col-5 {
+      position: relative;
+      height: auto;
+      left: 12rem;
+      top: 24rem;
+    }
+
+    img {
+      width: 308px;
+      height: 54px;
+    }
+
+    h2 {
+      font-family: $brandongrotesque-med;
+      color: $white;
+      width: 43.1rem;
+      font-size: 2.4rem;
+      line-height: 3.0rem;
+      margin-top: 3.2rem;
+    }
+  }
+
+  #main {
+    background-color: $white;
+  }
+
+  &.no-scroll {
+    nav.navbar {
+      background-color: transparent !important;
+
+      .nav-link {
+        color: #fff;
+      }
+    }
+
+    .navbar-light .navbar-toggler-icon {
+        background-image: url("/images/mobile-menu-light.svg");
+    }
+
+    .navbar-brand {
+      display: none;
+    }
+
+    @include media-breakpoint-up(med) {
+      body.home .jumbotron {
+        margin-top: auto;
+      }
+    }
+  }
+}
+
 // About
 // News
 // Events
