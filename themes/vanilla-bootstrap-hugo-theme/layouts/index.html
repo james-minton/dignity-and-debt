@@ -1,5 +1,12 @@
 {{ define "main" }}
 
+<div id="home-jumbotron" class="jumbotron row" style="">
+  <div class="col-5">
+    <img src="{{ "images/header-logo-white.svg" | absURL }}" class="d-inline-block align-top" alt="{{ .Site.Title }} logo" aria-level="1" tabindex="0">
+    <h2 tabindex="0">{{ .Page.Params.subtitle }}</h2>
+  </div>
+</div>
+
 <div class="row">
   <h3>Objectives</h3>
   <div class="objectives">
