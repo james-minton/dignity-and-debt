@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Dignity and Debt</title>
+    <title>Home on Dignity and Debt</title>
     <link>/</link>
-    <description>Recent content on Dignity and Debt</description>
+    <description>Recent content in Home on Dignity and Debt</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 24 Jan 2019 00:00:00 +0000</lastBuildDate>
@@ -75,7 +75,7 @@
     </item>
     
     <item>
-      <title>About the Network</title>
+      <title>About</title>
       <link>/about/</link>
       <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
       

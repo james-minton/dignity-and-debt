@@ -1,13 +1,48 @@
 {{ define "main" }}
 
 <div id="home-jumbotron" class="jumbotron row" style="">
-  <div class="col-5">
-    <img src="{{ "images/header-logo-white.svg" | absURL }}" class="d-inline-block align-top" alt="{{ .Site.Title }} logo" aria-level="1" tabindex="0">
-    <h2 tabindex="0">{{ .Page.Params.subtitle }}</h2>
+  <div class="col-md-4 col-intro">
+    <img src="{{ "images/header-logo-white.svg" | absURL }}" class="d-inline-block align-top" alt="{{ .Site.Title }} logo" aria-level="1" tabindex="-1">
+    <div class="h2" aria-level="2" tabindex="0">{{ .Page.Params.subtitle }}</div>
+
   </div>
 </div>
 
-<div class="row">
+<h3 class="who-we-are">Who We Are</h3>
+<div class="row who-we-are flex-parent">
+    {{ $img := strings.TrimPrefix "/uploads/" .Page.Params.who_we_are_image }}
+    {{ with $.Site.GetPage "page" "uploads/_index.md" }}
+        {{ with .Resources.GetMatch $img }}
+              {{$img400 := .Fill "296x243 Center"}}
+              <img class="flex-child" src="{{ $img400.RelPermalink }}" width="296" height="243">
+        {{ end }}
+    {{ end }}
+    <div class="flex-child text">
+      <div class="blurb">{{ .Page.Params.who_we_are }}</div>
+    </div>
+    <div class="w-100"></div>
+    <div class="col">
+      <a class="btn btn-custom" href="{{ "/about/" | absURL }}" tabindex="0" aria-label="Go to About">LEARN MORE</a>
+    </div>
+</div>
+
+<div class="row news flex-parent">
+</div>
+
+<div class="row biglinks flex-parent">
+  <div class="flex-child projects col col-4">
+    <span>PROJECTS</span>
+  </div>
+  <div class="flex-child meetings col col-4">
+    <span>MEETINGS</span>
+  </div>
+</div>
+
+<div class="row sponsors flex-parent">
+</div>
+
+
+<!-- <div class="row">
   <h3>Objectives</h3>
   <div class="objectives">
     {{ range .Site.Data.objectives }}
@@ -23,9 +58,9 @@
       {{ end }}
     {{ end }}
   </div>
-</div>
+</div> -->
 
-<h3>Upcoming Events</h3>
+<!-- <h3>Upcoming Events</h3>
 <div class="events">
 {{ range where .Site.Pages "Section" "events"  }}
   {{ range first 3 (where .Pages "Date.Unix" "gt" now.Unix) }}
@@ -39,6 +74,6 @@
 </div>
   {{ end }}
 {{ end }}
-</div>
+</div> -->
 
 {{ end }}

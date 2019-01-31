@@ -354,8 +354,8 @@ template {
 
 .container {
   width: 100%;
-  padding-right: 16px;
-  padding-left: 16px;
+  padding-right: 15px;
+  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -368,8 +368,8 @@ template {
 
 .container-fluid {
   width: 100%;
-  padding-right: 16px;
-  padding-left: 16px;
+  padding-right: 15px;
+  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -377,8 +377,8 @@ template {
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -16px;
-  margin-left: -16px;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 .no-gutters {
@@ -401,8 +401,8 @@ template {
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: 16px;
-  padding-left: 16px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .col {
@@ -4031,22 +4031,22 @@ tbody.collapse.show {
 }
 
 .card-deck .card {
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 }
 
 @media (min-width: 480px) {
   .card-deck {
     flex-flow: row wrap;
-    margin-right: -16px;
-    margin-left: -16px;
+    margin-right: -15px;
+    margin-left: -15px;
   }
   .card-deck .card {
     display: flex;
     flex: 1 0 0%;
     flex-direction: column;
-    margin-right: 16px;
+    margin-right: 15px;
     margin-bottom: 0;
-    margin-left: 16px;
+    margin-left: 15px;
   }
 }
 
@@ -4056,7 +4056,7 @@ tbody.collapse.show {
 }
 
 .card-group > .card {
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 }
 
 @media (min-width: 480px) {
@@ -11113,6 +11113,7 @@ h1 {
 }
 
 h2,
+div.h2,
 h3,
 h4,
 h5,
@@ -11145,7 +11146,7 @@ nav.navbar-light .navbar-brand {
   background-image: url("/images/header-logo.svg");
   height: 68px;
   width: 206px;
-  background-position: 0 18px;
+  background-position: 0 15px;
   background-repeat: no-repeat;
 }
 
@@ -11282,22 +11283,14 @@ body.home .jumbotron {
   height: 572px;
 }
 
-body.home .jumbotron .col-5 {
-  position: relative;
-  height: auto;
-  left: 12rem;
-  top: 24rem;
-}
-
 body.home .jumbotron img {
   width: 308px;
   height: 54px;
 }
 
-body.home .jumbotron h2 {
+body.home .jumbotron div.h2 {
   font-family: "BrandonGrotesque-Med", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
   color: #ffffff;
-  width: 43.1rem;
   font-size: 2.4rem;
   line-height: 3.0rem;
   margin-top: 3.2rem;
@@ -11305,6 +11298,27 @@ body.home .jumbotron h2 {
 
 body.home #main {
   background-color: #ffffff;
+}
+
+body.home .col-intro {
+  position: relative;
+  height: auto;
+  top: 24rem;
+}
+
+@media (min-width: 480px) {
+  body.home .col-intro {
+    left: 6rem;
+  }
+  body.home .col-intro div.h2 {
+    width: 43.1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  body.home .col-intro {
+    left: 12rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -11319,6 +11333,102 @@ body.home #main {
   }
 }
 
+h3.who-we-are {
+  text-transform: uppercase;
+  font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-size: 2.8rem;
+  line-height: 3.6rem;
+  padding-top: 6.4rem;
+  padding-bottom: 4.8rem;
+  text-align: center;
+}
+
+.container.parent > #main > .row.who-we-are {
+  margin-left: 3.6rem;
+  margin-right: 3.6rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .container.parent > #main > .row.who-we-are {
+    justify-content: flex-start;
+  }
+}
+
+.container.parent > #main > .row.who-we-are img.flex-child {
+  margin-right: 0;
+  flex: 0 0 2.96rem;
+}
+
+@media (min-width: 480px) {
+  .container.parent > #main > .row.who-we-are img.flex-child {
+    margin-right: 24px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container.parent > #main > .row.who-we-are img.flex-child {
+    margin-right: 32px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container.parent > #main > .row.who-we-are img.flex-child {
+    margin-right: 40px;
+  }
+}
+
+.container.parent > #main > .row.who-we-are .text.flex-child {
+  flex: 1 1 3.6rem;
+  min-width: 360px;
+  font-family: "BrandonGrotesque-Med", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-size: 2.2rem;
+  line-height: 2.8rem;
+  margin-top: 4.8rem;
+}
+
+@media (min-width: 768px) {
+  .container.parent > #main > .row.who-we-are .text.flex-child {
+    margin-top: 0;
+  }
+}
+
+.container.parent > #main > .row.who-we-are .col {
+  text-align: center;
+}
+
+.container.parent > #main > .row.who-we-are .col .btn-custom {
+  margin-top: 7.2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-custom {
+  display: inline-block;
+  font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-size: 18px;
+  color: #0A3D5F;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  width: 167px;
+  height: 53px;
+  border: 4px solid #0A3D5F;
+  padding-top: 1rem;
+  border-radius: 0;
+  box-shadow: 6px 6px 0 #0A3D5F;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-custom:active, .btn-custom:hover {
+  box-shadow: 5.5px 5.5px 0 #0A3D5F;
+  transform: translate(1px, 1px);
+  color: #0A3D5F;
+}
+
 @supports (position: sticky) or (position: -webkit-sticky) {
   .sticky-top {
     position: -webkit-sticky;
@@ -11326,6 +11436,60 @@ body.home #main {
     top: 0;
     z-index: 1020;
   }
+}
+
+@media (min-width: 480px) {
+  .row {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  .row {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .row {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .row {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.flex-parent {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.flex-child {
+  flex: 0 1 auto;
 }
 
 /*# sourceMappingURL=style.css.map */
