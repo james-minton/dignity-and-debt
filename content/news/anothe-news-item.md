@@ -1,8 +1,8 @@
 ---
-title: "Another news item"
-subtitle: "This is the another news item page subtitle"
+title: "Excepteur sint occaecat cupidatat non proident"
 date: "2019-01-22"
-image: ""
+author: "Fred Wherry"
+image: "/uploads/wherry-seminar-table.jpg"
 ---
 
 Another news item page content.

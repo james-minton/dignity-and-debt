@@ -1,0 +1,41 @@
+{{ define "main" }}
+
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+
+<p style="color:red;">test single</p>
+<p style="color:red;">test single OVERRIDE OVERRIDE</p>
+
+<div class="row sponsors flex-parent">
+  <h3 class="" tabindex="0">Collaboration with</h3>
+  <div class="w-100"></div>
+  <div class="flex-parent">
+    <div class="flex-child org-tile">
+      <a href="" target="_blank" aria-haspopup>
+        <img class="" src="{{ "images/princeton_logo.png" | absURL }}" width="208" height="57" alt="Princeton Unviersity logo">
+      </a>
+    </div>
+    <div class="flex-child org-tile">
+      <a href="" target="_blank" aria-haspopup>
+        <img class="" src="{{ "images/piirs_logo.png" | absURL }}" width="152" height="63" alt="Princeton Institute for International and Regional Studies logo">
+      </a>
+    </div>
+    <div class="flex-child org-tile">
+      <a href="" target="_blank" aria-haspopup>
+        <img class="" src="{{ "images/ssrc_logo.png" | absURL }}" width="175" height="57" alt="Social Science Research Council logo">
+      </a>
+    </div>
+  </div>
+  <div class="w-100"></div>
+  <h3 class="" tabindex="0">Funded by</h3>
+  <div class="w-100"></div>
+  <div class="flex-parent">
+    <div class="flex-child org-tile">
+      <a href="" target="_blank" aria-haspopup>
+        <img class="" src="{{ "images/mc_cig_logo.png" | absURL }}" width="196" height="60" alt="MasterCard Center for Inclusive Growth logo">
+      </a>
+    </div>
+  </div>
+</div>
+
+{{ end }}

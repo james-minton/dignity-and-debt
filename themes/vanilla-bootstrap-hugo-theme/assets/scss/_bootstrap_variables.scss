@@ -8,6 +8,7 @@ $grid-breakpoints: (
 
 $container-max-widths: (
   sm: 1280px,
+  lg: 1440px,
 );
 
 $grid-columns:               12 !default;
@@ -35,6 +36,8 @@ $jumbotron-padding: 0;
 $white: #ffffff;
 $black: #000000;
 $aqua: #C9E9EA;
+$aqualink: #1C6F81;
+$graybg: #DBE0E4;
 $darkblue: #0A3D5F;
 $primary: #1c3ed3;
 $secondary: #43454d;

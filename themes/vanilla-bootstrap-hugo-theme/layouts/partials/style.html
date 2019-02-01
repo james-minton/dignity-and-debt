@@ -2,22 +2,23 @@
 {{ $img := strings.TrimPrefix "/uploads/" .Page.Params.hero_image }}
 {{ with $.Site.GetPage "page" "uploads/_index.md" }}
   {{ with .Resources.GetMatch $img }}
-    {{$img1280 := .Fill "1280x640 TopLeft"}}
+    /* {{$img1280 := .Fill "1280x640 TopLeft"}} */
+    {{$img1440 := .Fill "1440x720 TopLeft"}}
     @media (min-width: 769px) {
       .home.scroll-top nav {
-        background-image: url('{{ $img1280.RelPermalink }}');
+        background-image: url('{{ $img1440.RelPermalink }}');
         background-color: rgba(10, 61, 95, 0.5) !important;
         background-blend-mode: multiply;
-        background-size: 1280px 640px;
+        background-size: 1440px 720px;
         background-repeat: no-repeat;
       }
     }
     #home-jumbotron {
-      background-image: url('{{ $img1280.RelPermalink }}');
+      background-image: url('{{ $img1440.RelPermalink }}');
       background-color: rgba(10, 61, 95, 0.5);
       background-blend-mode: multiply;
       background-position: 0 -68px;
-      background-size: 1280px 640px;
+      background-size: 1440px 720px;
       background-repeat: no-repeat;
     }
   {{ end }}

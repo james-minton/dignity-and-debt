@@ -1,0 +1,64 @@
+{{ define "main" }}
+
+<div id="home-jumbotron" class="jumbotron text-center">
+  <h1 tabindex="0">{{ .Site.Title }}</h1>
+  <p class="font-125">{{ .Site.Params.homeText | markdownify }}</p>
+  <h2 tabindex="0">{{ .Page.Params.subtitle }}</h2>
+  <h2 tabindex="0">{{ .Content }}</h2>
+</div>
+
+<h3>Objectives</h3>
+<div class="objectives">
+
+</div>
+
+<h3>Meet the Network</h3>
+
+<div class="people">
+{{ range where .Site.Pages "Section" "events"  }}
+  {{ range first 3 (where .Pages "Date.Unix" "gt" now.Unix) }}
+  {{ $dateTime := .PublishDate.Format "2006-01-02" }}
+  {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+<div>
+    <time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
+  <a class="font-125" href="{{ .Permalink }}">{{ .Title }}</a>
+  <p>{{ .Content }}</p>
+  {{ partial "news-date-and-tags.html" . }}
+</div>
+  {{ end }}
+{{ end }}
+</div>
+
+<div class="row sponsors flex-parent">
+  <h3 class="" tabindex="0">Collaboration with</h3>
+  <div class="w-100"></div>
+  <div class="flex-parent">
+    <div class="flex-child org-tile">
+      <a href="" target="_blank" aria-haspopup>
+        <img class="" src="{{ "images/princeton_logo.png" | absURL }}" width="208" height="57" alt="Princeton Unviersity logo">
+      </a>
+    </div>
+    <div class="flex-child org-tile">
+      <a href="" target="_blank" aria-haspopup>
+        <img class="" src="{{ "images/piirs_logo.png" | absURL }}" width="152" height="63" alt="Princeton Institute for International and Regional Studies logo">
+      </a>
+    </div>
+    <div class="flex-child org-tile">
+      <a href="" target="_blank" aria-haspopup>
+        <img class="" src="{{ "images/ssrc_logo.png" | absURL }}" width="175" height="57" alt="Social Science Research Council logo">
+      </a>
+    </div>
+  </div>
+  <div class="w-100"></div>
+  <h3 class="" tabindex="0">Funded by</h3>
+  <div class="w-100"></div>
+  <div class="flex-parent">
+    <div class="flex-child org-tile">
+      <a href="" target="_blank" aria-haspopup>
+        <img class="" src="{{ "images/mc_cig_logo.png" | absURL }}" width="196" height="60" alt="MasterCard Center for Inclusive Growth logo">
+      </a>
+    </div>
+  </div>
+</div>
+
+{{ end }}

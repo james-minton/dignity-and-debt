@@ -50,7 +50,6 @@ h3 {
   margin-left: 0;
 }
 
-
 // Header
 nav.navbar-light {
   padding: 0 3.2rem;
@@ -201,144 +200,9 @@ button.navbar-toggler {
 
 }
 
-
-
-// Page-specific styles
-
-// Home
-// Navbar transparent bg
-
-// Hero
-.jumbotron {
-  border-radius: 0;
-  background-color: transparent;
-}
-
-body.home {
-  .jumbotron {
-    height: 572px;
-
-    img {
-      width: 308px;
-      height: 54px;
-    }
-
-    div.h2 {
-      font-family: $brandongrotesque-med;
-      color: $white;
-      // width: 43.1rem;
-      font-size: 2.4rem;
-      line-height: 3.0rem;
-      margin-top: 3.2rem;
-    }
-  }
-
-  #main {
-    background-color: $white;
-  }
-
-  .col-intro {
-    position: relative;
-    height: auto;
-    top: 24rem;
-  }
-
-  @include media-breakpoint-up(sm) {
-    .col-intro {
-      left: 6rem;
-      div.h2 {
-        width: 43.1rem;
-      }
-    }
-  }
-
-  @include media-breakpoint-up(md) {
-    .col-intro {
-      left: 12rem;
-    }
-  }
-
-  &.scroll-top {
-    @include media-breakpoint-up(md) {
-      nav.navbar {
-        .navbar-brand {
-          background-image: none;
-        }
-      }
-
-      .nav-link {
-        color: #fff;
-
-        &:hover {
-          color: #fff;
-        }
-      }
-    }
-  }
-}
-
-// WHO WE ARE
-h3.who-we-are {
-  text-transform: uppercase;
-  font-family: $brandongrotesque-bold;
-  font-size: 2.8rem;
-  line-height: 3.6rem;
-  padding-top: 6.4rem;
-  padding-bottom: 4.8rem;
-  text-align: center;
-}
-
-.container.parent > #main > .row.who-we-are {
-  margin-left: 3.6rem;
-  margin-right: 3.6rem;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-
-  @include media-breakpoint-up(md) {
-    justify-content: flex-start;
-  }
-
-  img.flex-child {
-    margin-right: 0;
-    flex: 0 0 2.96rem;
-
-    @include media-breakpoint-up(sm) {
-      margin-right: 24px;
-    }
-
-    @include media-breakpoint-up(lg) {
-      margin-right: 32px;
-    }
-
-    @include media-breakpoint-up(xl) {
-      margin-right: 40px;
-    }
-  }
-
-  .text.flex-child {
-    flex: 1 1 3.6rem;
-    min-width: 360px;
-    font-family: $brandongrotesque-med;
-    font-size: 2.2rem;
-    line-height: 2.8rem;
-    margin-top: 4.8rem;
-
-    @include media-breakpoint-up(md) {
-      margin-top: 0;
-    }
-  }
-
-  .col {
-    text-align: center;
-    .btn-custom {
-      margin-top: 7.2rem;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-}
-
+//
+// General custom elements
+//
 
 // Custom button style
 .btn-custom {
@@ -440,8 +304,320 @@ h3.who-we-are {
   flex: 0 1 auto;
 }
 
+////// Home
+
+// Hero
+.jumbotron {
+  border-radius: 0;
+  background-color: transparent;
+}
+
+body.home {
+  .jumbotron {
+    height: 572px;
+
+    img {
+      width: 308px;
+      height: 54px;
+    }
+
+    div.h2 {
+      font-family: $brandongrotesque-med;
+      color: $white;
+      // width: 43.1rem;
+      font-size: 2.4rem;
+      line-height: 3.0rem;
+      margin-top: 3.2rem;
+    }
+  }
+
+  #main {
+    background-color: $white;
+  }
+
+  .col-intro {
+    position: relative;
+    height: auto;
+    top: 24rem;
+  }
+
+  @include media-breakpoint-up(sm) {
+    .col-intro {
+      left: 6rem;
+      div.h2 {
+        width: 43.1rem;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .col-intro {
+      left: 12rem;
+    }
+  }
+
+  &.scroll-top {
+    @include media-breakpoint-up(md) {
+      nav.navbar {
+        .navbar-brand {
+          background-image: none;
+        }
+      }
+
+      .nav-link {
+        color: #fff;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+// WHO WE ARE
+h3.who-we-are,
+.news-blocks h3 {
+  text-transform: uppercase;
+  font-family: $brandongrotesque-bold;
+  font-size: 2.8rem;
+  line-height: 3.6rem;
+  padding-top: 6.4rem;
+  padding-bottom: 4.8rem;
+  text-align: center;
+}
+
+.container.parent > #main > .row.who-we-are {
+  margin-left: 3.6rem;
+  margin-right: 3.6rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  @include media-breakpoint-up(md) {
+    justify-content: flex-start;
+  }
+
+  img.flex-child {
+    margin-right: 0;
+    flex: 0 0 2.96rem;
+
+    @include media-breakpoint-up(sm) {
+      margin-right: 24px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-right: 32px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-right: 40px;
+    }
+  }
+
+  .text.flex-child {
+    flex: 1 1 3.6rem;
+    min-width: 360px;
+    font-family: $brandongrotesque-med;
+    font-size: 2.2rem;
+    line-height: 2.8rem;
+    margin-top: 4.8rem;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 0;
+    }
+  }
+
+  .col {
+    text-align: center;
+    .btn-custom {
+      margin-top: 7.2rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+// News banner
+.row.news-banner {
+  margin-top: 8.8rem;
+  min-height: 168px;
+
+  .flex-parent {
+    background-color: $aqua;
+    justify-content: flex-start;
+    padding-right: 0;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 3.6rem;
+
+    img.flex-child {
+      border-radius: 50px;
+      height: 102px;
+      width: 102px;
+      margin-top: 3.2rem;
+      margin-left: 8px;
+      flex: 0 0 102px;
+    }
+
+    .flex-child {
+      width: 200px;
+
+      line-height: 2.4rem;
+
+      &.text {
+        flex: 1 1 100px;
+        margin-left: 2.8rem;
+        margin-top: 3.6rem;
+
+        h3 {
+          font-family: $brandongrotesque-bold;
+          font-size: 28px;
+        }
+
+        span {
+          font-family: $font-family-base;
+          font-size: 18px;
+          color: $darkblue;
+        }
+
+      }
+
+      &.arrow {
+        margin-top: 1.6rem;
+        margin-right: 1.6rem;
+        width: 46px;
+        background-image: url("/images/arrow.png");
+        background-repeat: no-repeat;
+        flex: 0 0 46px;
+      }
+    }
+  }
+}
+
+// Block links
+.row.biglinks {
+  margin-top: 4.4rem;
+  // background-color: red;
+  a {
+    display: block;
+    width: 460px;
+    height: 336px;
+    text-align: center;
+    margin-top: 4.4rem;
+
+    @media (max-width: 996px) {
+      float: none !important;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (max-width: 480px) {
+      width: 360px;
+    }
+
+    &.link-projects {
+      background-image: url("/images/projects_tile.png");
+    }
+    &.link-meetings {
+      background-image: url("/images/meetings_tile.png");
+    }
+    &:hover {
+      text-decoration: none;
+    }
+
+    span {
+      font-family: $brandongrotesque-bold;
+      font-size: 2.8rem;
+      line-height: 336px;
+    }
+  }
+}
+
+// News blocks row
+.row.news-blocks {
+  h3 {
+     padding-bottom: 2.8rem;
+     text-align: center;
+     width: 100%;
+  }
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+  margin-top: 8.8rem;
+  background-color: $graybg;
+
+  .event-tile {
+    width: 296px;
+    height: 310px;
+    background-color: white;
+    margin-right: 16px;
+    margin-left: 16px;
+    margin-bottom: 3.2rem;
+  }
+
+  a.link-news {
+    margin-top: 1.6rem;
+    margin-left: 1.6rem;
+    margin-right: 1.6rem;
+    margin-bottom: 1.2rem;
+    font-family: $brandongrotesque-med;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    color: $darkblue;
+    display: inline-block;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .flex-parent {
+    margin-left: auto;
+    margin-right: auto;
+    // justify-content: flex-start;
+  }
+
+  time {
+    font-family: $brandongrotesque-reg;
+    font-size: 1.4rem;
+    font-style: italic;
+    margin-left: 1.6rem;
+    display: inline-block;
+    color: $aqualink;
+  }
+
+  a.btn-custom {
+    margin-top: 3.2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7.2rem;
+  }
+}
+
+// Sponsors panel
+.row.sponsors {
+  padding-top: 6.4rem;
+  padding-bottom: 9.6rem;
+
+  h3 {
+    margin-top: 4.8rem;
+    margin-bottom: 7.2rem;
+    font-family: $brandongrotesque-med;
+    font-size: 3.2rem;
+  }
+
+  .org-tile {
+     padding-left: 4.8rem;
+     padding-right: 4.8rem;
+     margin-bottom: 3.2rem;
+  }
+}
 
 
-// About
-// News
-// Events
+////// About
+
+
+
+
+////// News
+////// Events

@@ -8,17 +8,17 @@
   </div>
 </div>
 
-<h3 class="who-we-are">Who We Are</h3>
+<h3 class="who-we-are" tabindex="0">Who We Are</h3>
 <div class="row who-we-are flex-parent">
     {{ $img := strings.TrimPrefix "/uploads/" .Page.Params.who_we_are_image }}
     {{ with $.Site.GetPage "page" "uploads/_index.md" }}
         {{ with .Resources.GetMatch $img }}
               {{$img400 := .Fill "296x243 Center"}}
-              <img class="flex-child" src="{{ $img400.RelPermalink }}" width="296" height="243">
+              <img class="flex-child" src="{{ $img400.RelPermalink }}" width="296" height="243" alt="Gathering of people talking">
         {{ end }}
     {{ end }}
     <div class="flex-child text">
-      <div class="blurb">{{ .Page.Params.who_we_are }}</div>
+      <div class="blurb" tabindex="0">{{ .Page.Params.who_we_are }}</div>
     </div>
     <div class="w-100"></div>
     <div class="col">
@@ -26,19 +26,100 @@
     </div>
 </div>
 
-<div class="row news flex-parent">
+<div class="row news-banner ">
+  <div class="flex-parent col col-md-7 col-sm-10">
+      {{ $img := strings.TrimPrefix "/uploads/" .Page.Params.who_we_are_image }}
+      {{ with $.Site.GetPage "page" "uploads/_index.md" }}
+          {{ with .Resources.GetMatch $img }}
+                {{$img102 := .Fill "102x102 Center"}}
+                <img class="flex-child" src="{{ $img102.RelPermalink }}" width="102" height="102" alt="News banner image" tabindex="0">
+          {{ end }}
+      {{ end }}
+      <div class="flex-child text">
+        <h3 tabindex="0">{{ .Page.Params.news_banner_heading }}</h3>
+        <span tabindex="0">{{ safeHTML .Page.Params.news_banner_blurb }}</span>
+      </div>
+      <a href="{{ .Page.Params.news_banner_link }}" class="flex-child arrow" aria-label="Go to News" tabindex="0"></a>
+    </div>
 </div>
 
-<div class="row biglinks flex-parent">
-  <div class="flex-child projects col col-4">
-    <span>PROJECTS</span>
+<div class="row biglinks">
+  <div class="projects col">
+    <a href="{{ "/projects/" | absURL }}" class="link-projects float-right" tabindex="0" aria-label="Go to Projects">
+      <span class="align-middle">PROJECTS</span>
+    </a>
   </div>
-  <div class="flex-child meetings col col-4">
-    <span>MEETINGS</span>
+  <div class="meetings col">
+    <a href="{{ "/meetings/" | absURL }}" class="link-meetings float-left" tabindex="0" aria-label="Go to Meetings">
+      <span class="align-middle">MEETINGS</span>
+    </a>
   </div>
+</div>
+
+
+<div class="row news-blocks">
+  <h3 class="" tabindex="0">NEWS</h3>
+  <div class="w-100"></div>
+  <div class="flex-parent">
+  {{ range where .Site.Pages "Section" "news"  }}
+    {{ range first 3 (where .Pages "Date.Unix" "lt" now.Unix) }}
+    <!-- date setup -->
+    {{ $dateTime := .PublishDate.Format "2006-01-02" }}
+    {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+    <!-- fetch image -->
+    {{ $img := strings.TrimPrefix "/uploads/" .Params.image }}
+    <div class="flex-child event-tile">
+      {{ with $.Site.GetPage "page" "uploads/_index.md" }}
+          {{ with .Resources.GetMatch $img }}
+                {{$img400 := .Fill "296x185 Center"}}
+                <img class="" src="{{ $img400.RelPermalink }}" width="296" height="185" alt="News announcement photo">
+          {{ end }}
+      {{ end }}
+      <a class="link-news" href="{{ .Permalink }}" tabindex="0">{{ .Title }}</a>
+      <time datetime="{{ $dateTime }}" tabindex="0">{{ .PublishDate.Format $dateFormat }}</time>
+      <!-- <p tabindex="0">{{ .Content }}</p> -->
+      <!-- {{ partial "news-date-and-tags.html" . }} -->
+    </div>
+    {{ end }}
+  {{ end }}
+  </div>
+  <div class="w-100"></div>
+  <!-- <div class="col"> -->
+    <a class="btn btn-custom" href="{{ "/news/" | absURL }}" tabindex="0" aria-label="Go to About">VIEW ALL</a>
+  <!-- </div> -->
+
 </div>
 
 <div class="row sponsors flex-parent">
+  <h3 class="" tabindex="0">Collaboration with</h3>
+  <div class="w-100"></div>
+  <div class="flex-parent">
+    <div class="flex-child org-tile">
+      <a href="" target="_blank" aria-haspopup>
+        <img class="" src="{{ "images/princeton_logo.png" | absURL }}" width="208" height="57" alt="Princeton Unviersity logo">
+      </a>
+    </div>
+    <div class="flex-child org-tile">
+      <a href="" target="_blank" aria-haspopup>
+        <img class="" src="{{ "images/piirs_logo.png" | absURL }}" width="152" height="63" alt="Princeton Institute for International and Regional Studies logo">
+      </a>
+    </div>
+    <div class="flex-child org-tile">
+      <a href="" target="_blank" aria-haspopup>
+        <img class="" src="{{ "images/ssrc_logo.png" | absURL }}" width="175" height="57" alt="Social Science Research Council logo">
+      </a>
+    </div>
+  </div>
+  <div class="w-100"></div>
+  <h3 class="" tabindex="0">Funded by</h3>
+  <div class="w-100"></div>
+  <div class="flex-parent">
+    <div class="flex-child org-tile">
+      <a href="" target="_blank" aria-haspopup>
+        <img class="" src="{{ "images/mc_cig_logo.png" | absURL }}" width="196" height="60" alt="MasterCard Center for Inclusive Growth logo">
+      </a>
+    </div>
+  </div>
 </div>
 
 
