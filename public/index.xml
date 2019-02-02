@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Excepteur sint occaecat cupidatat non proident</title>
+      <link>/news/future-item-01/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/news/future-item-01/</guid>
+      <description>future item contents</description>
+    </item>
+    
+    <item>
       <title>Future Item 01</title>
       <link>/events/future-item-01/</link>
       <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
@@ -21,11 +30,11 @@
     </item>
     
     <item>
-      <title>Future Item 01</title>
-      <link>/news/future-item-01/</link>
-      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      <title>Excepteur sint occaecat cupidatat non proident</title>
+      <link>/news/future-item-03/</link>
+      <pubDate>Thu, 25 Apr 2019 13:03:03 -0600</pubDate>
       
-      <guid>/news/future-item-01/</guid>
+      <guid>/news/future-item-03/</guid>
       <description>future item contents</description>
     </item>
     
@@ -39,11 +48,11 @@
     </item>
     
     <item>
-      <title>Future Item 03</title>
-      <link>/news/future-item-03/</link>
-      <pubDate>Thu, 25 Apr 2019 13:03:03 -0600</pubDate>
+      <title>Excepteur sint occaecat cupidatat non proident</title>
+      <link>/news/future-item-02/</link>
+      <pubDate>Mon, 25 Mar 2019 13:02:59 -0600</pubDate>
       
-      <guid>/news/future-item-03/</guid>
+      <guid>/news/future-item-02/</guid>
       <description>future item contents</description>
     </item>
     
@@ -57,30 +66,12 @@
     </item>
     
     <item>
-      <title>Future Item 02</title>
-      <link>/news/future-item-02/</link>
-      <pubDate>Mon, 25 Mar 2019 13:02:59 -0600</pubDate>
-      
-      <guid>/news/future-item-02/</guid>
-      <description>future item contents</description>
-    </item>
-    
-    <item>
-      <title>New Item 05</title>
+      <title>Excepteur sint occaecat cupidatat non proident</title>
       <link>/news/new-item-05/</link>
       <pubDate>Fri, 25 Jan 2019 12:11:13 -0600</pubDate>
       
       <guid>/news/new-item-05/</guid>
       <description>This is some more content</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>/about/</link>
-      <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description>The Dignity + Debt Network, a collaboration between Princeton University and the Social Science Research Council, is a group of experts across a dozen countries developing meaningful, data-rich analyses and innovative financial services for low and moderate income households. Rather than using stories and texts as anecdotes, the network combines both richly-detailed case studies and experiments and computational analysis of large bodies of texts to assess the meanings and values that affect financial capability and well-being.</description>
     </item>
     
     <item>
@@ -129,7 +120,7 @@
     </item>
     
     <item>
-      <title>New Item 04</title>
+      <title>Excepteur sint occaecat cupidatat non proident</title>
       <link>/news/new-item-04/</link>
       <pubDate>Thu, 24 Jan 2019 12:08:10 -0600</pubDate>
       
@@ -138,7 +129,7 @@
     </item>
     
     <item>
-      <title>Another news item</title>
+      <title>Excepteur sint occaecat cupidatat non proident</title>
       <link>/news/anothe-news-item/</link>
       <pubDate>Tue, 22 Jan 2019 00:00:00 +0000</pubDate>
       
@@ -147,7 +138,7 @@
     </item>
     
     <item>
-      <title>This is a news item</title>
+      <title>Excepteur sint occaecat cupidatat non proident</title>
       <link>/news/new-test-news/</link>
       <pubDate>Mon, 21 Jan 2019 00:00:00 +0000</pubDate>
       
@@ -156,7 +147,7 @@
     </item>
     
     <item>
-      <title>This is a third news item</title>
+      <title>Excepteur sint occaecat cupidatat non proident</title>
       <link>/news/third-news-item/</link>
       <pubDate>Tue, 15 Jan 2019 00:00:00 +0000</pubDate>
       

@@ -7,6 +7,9 @@
   <h2 tabindex="0">{{ .Content }}</h2>
 </div>
 
+<p style="color:red;">test single OVERRIDE OVERRIDE</p>
+
+
 <h3>Objectives</h3>
 <div class="objectives">
 
@@ -15,6 +18,7 @@
 <h3>Meet the Network</h3>
 
 <div class="people">
+  <!-- People data object, sorted by type -->
 {{ range where .Site.Pages "Section" "events"  }}
   {{ range first 3 (where .Pages "Date.Unix" "gt" now.Unix) }}
   {{ $dateTime := .PublishDate.Format "2006-01-02" }}

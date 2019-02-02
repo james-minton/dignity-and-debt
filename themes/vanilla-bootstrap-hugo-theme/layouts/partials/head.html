@@ -1,6 +1,56 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Fetch description for metadata -->
+  {{ if .Page.Params.description }}
+    {{ $.Scratch.Set "socialDescription" .Page.Params.description }}
+  {{ else }}
+    {{ $.Scratch.Set "socialDescription" .Site.Data.social_description }}
+  {{ end }}
+
+  <!-- Fetch an image for metadata -->
+  {{ if .Page.Params.image }}
+    <!-- First try for page image -->
+    {{ $img := strings.TrimPrefix "/uploads/" .Page.Params.image }}
+    {{ with $.Site.GetPage "page" "uploads/_index.md" }}
+      {{ with .Resources.GetMatch $img }}
+        {{$img400 := .Fill "400x Center"}}
+        {{ $.Scratch.Set "socialImage" $img400.Permalink }}
+      {{ end }}
+    {{ end }}
+  {{ else }}
+    <!-- Otherwise use the default social image -->
+    {{ $img := strings.TrimPrefix "/uploads/" .Site.Data.social.social_image }}
+    {{ with $.Site.GetPage "page" "uploads/_index.md" }}
+      {{ with .Resources.GetMatch $img }}
+        {{$img400 := .Fill "400x Center"}}
+        {{ $.Scratch.Set "socialImage" $img400.Permalink }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  <!-- General metadata -->
+  <meta name="description" content="{{ $.Scratch.Get "socialDescription" }}" />
+  <meta name='author' content='Dignity and Debt Network' />
+  <!-- Facebook metadata -->
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{ .Title }}" />
+  <meta property="og:description" content="{{ $.Scratch.Get "socialDescription" }}" />
+  <meta property="og:url" content="{{ "/" | absURL }}" />
+  <meta property="og:site_name" content="{{ .Site.Title }}" />
+  <meta property="og:image" content="{{ $.Scratch.Get "socialImage" }}" />
+  <meta property="og:image:secure_url" content="{{ $.Scratch.Get "socialImage" }}" />
+  <!-- Twitter metadata -->
+  <meta name="twitter:card" content="summary_large_image" />
+  {{ if .Site.Data.social.twitter_via }}
+    <meta name="twitter:site" content="{{ strings.TrimPrefix "@" .Site.Data.social.twitter_via }}" />
+  {{ end }}
+  <meta name="twitter:title" content="{{ .Title }}" />
+  <meta name="twitter:description" content="{{ $.Scratch.Get "socialDescription" }}" />
+  <meta name="twitter:image" content="{{ $.Scratch.Get "socialImage" }}" />
+
   {{ .Hugo.Generator }}
   <!-- Original bootstrap stylesheet -->
   <!-- <link rel="stylesheet" href="{{ "css/bootstrap.min.css" | absURL }}"> -->
@@ -22,8 +72,6 @@
   <link rel="mask-icon" href="{{ "images/safari-pinned-tab.svg" | relURL }}" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#00aba9">
   <meta name="theme-color" content="#ffffff">
-  <!-- <link rel="shortcut icon" type="image/png" sizes="32x32" href="{{"images/faviconx32.png" | relURL}}">
-  <link rel="shortcut icon" type="image/png" sizes="16x16" href="{{"images/favicon.png" | relURL}}"> -->
   <!-- TODO: Replace with Adobe Caslon Pro -->
   <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Lusitana|Radley" rel="stylesheet">
   <!-- font awesome for social icons in footer -->

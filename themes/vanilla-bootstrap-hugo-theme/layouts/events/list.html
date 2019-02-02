@@ -1,0 +1,59 @@
+{{ define "main" }}
+
+<h1>{{ .Title }}</h1>
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link " id="home-tab" data-toggle="" href="{{ "/news/" | absURL }}" role="tab" aria-controls="home" aria-selected="true">News</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#events" role="tab" aria-controls="profile" aria-selected="false">Events</a>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade " id="news" role="tabpanel" aria-labelledby="home-tab">
+    <h2>{{ .Title }}</h2>
+    <p>news</p>
+  </div>
+  <div class="tab-pane fade show active" id="events" role="tabpanel" aria-labelledby="profile-tab">
+    <h2>Upcoming Events 2</h2>
+    <div class="list-upcoming-events-def">
+
+      {{ $paginator := .Paginate (where .Pages.ByPublishDate "Date.Unix" "gt" now.Unix) 4 }}
+      {{ range $paginator.Pages }}
+      <div>
+        <a class="font-125" href="{{ .Permalink }}">{{ .Title }}</a>
+        <span>{{ .Content }}</span>
+        {{ $dateTime := .PublishDate.Format "2006-01-02" }}
+        {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+        <time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
+        <a class="font-125" href="{{ .Permalink }}">{{ .Title }}</a>
+        <p>{{ .Content }}</p>
+        {{ partial "news-date-and-tags.html" . }}
+      </div>
+      {{ end }}
+      {{ template "_internal/pagination.html" . }}
+    </div>
+      {{/* end */}}
+    {{/* end */}}
+    </div>
+
+  </div>
+</div>
+
+
+
+<!-- <h2>Upcoming Events</h2>
+<div class="list-upcoming-events">
+{{ range where .Pages "Date.Unix" "gt" now.Unix }}
+<div>
+  <a class="font-125" href="{{ .Permalink }}">{{ .Title }}</a>
+  <br>
+  {{ partial "date-and-tags.html" . }}
+</div>
+{{ end }}
+</div> -->
+
+
+
+{{ end }}
