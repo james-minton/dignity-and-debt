@@ -314,7 +314,8 @@ button.navbar-toggler {
 
 body.home {
   .jumbotron {
-    height: 572px;
+    max-height: 652px;
+    height: 100vh;
 
     img {
       width: 308px;
