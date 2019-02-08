@@ -11736,6 +11736,21 @@ body.about .row.about-objective .figure {
   }
 }
 
+@media (min-width: 768px) {
+  body.about .row.about-obj-index-1 .number {
+    order: 1;
+    margin-left: 82%;
+    width: 8%;
+  }
+  body.about .row.about-obj-index-1 .figure {
+    order: 3;
+  }
+  body.about .row.about-obj-index-1 .descr {
+    order: 2;
+    margin-left: 8.33333333%;
+  }
+}
+
 @media (min-width: 1280px) {
   body.about .row.about-obj-index-1 .number {
     order: 3;

@@ -687,6 +687,25 @@ body.about {
       }
     }
 
+    @include media-breakpoint-up(md) {
+      &.about-obj-index-1 {
+        .number {
+          order: 1;
+          margin-left: 82%;
+          width: 8%;
+        }
+
+        .figure {
+          order: 3;
+        }
+
+        .descr {
+          order: 2;
+          margin-left: 8.33333333%;
+        }
+      }
+    }
+
     @include media-breakpoint-up(lg) {
       &.about-obj-index-1 {
         .number {
@@ -704,6 +723,8 @@ body.about {
         }
       }
     }
+
+
 
     &.about-people-head {
       margin-bottom: 8.0rem;
