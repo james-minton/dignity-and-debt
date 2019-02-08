@@ -11298,7 +11298,7 @@ button.navbar-toggler {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.btn-custom:active, .btn-custom:hover {
+.btn-custom:active, .btn-custom:hover, .btn-custom:focus {
   box-shadow: 5.5px 5.5px 0 #0A3D5F;
   transform: translate(1px, 1px);
   color: #0A3D5F;
@@ -11672,6 +11672,201 @@ h3.who-we-are,
   padding-left: 4.8rem;
   padding-right: 4.8rem;
   margin-bottom: 3.2rem;
+}
+
+body.about .row.about-hero .col {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+body.about .row.about-descr {
+  margin-top: -100px;
+  margin-bottom: 14rem;
+}
+
+body.about .row.about-descr .col {
+  background-color: #C9E9EA;
+  padding: 4rem;
+}
+
+body.about .row.about-descr .col h2 {
+  font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+body.about .row.about-descr .col p {
+  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  line-height: 2.6rem;
+  font-size: 1.8rem;
+}
+
+body.about .row.about-objective {
+  margin-bottom: 11.6rem;
+}
+
+body.about .row.about-objective .number span {
+  font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-size: 7rem;
+  color: #1C6F81;
+}
+
+body.about .row.about-objective .descr h3 {
+  font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-size: 2.8rem;
+  line-height: 3.2rem;
+  color: #003E62;
+  text-transform: uppercase;
+}
+
+body.about .row.about-objective .descr p {
+  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  color: #003E62;
+}
+
+body.about .row.about-objective .figure {
+  min-width: 180px;
+}
+
+@media (max-width: 768px) {
+  body.about .row.about-objective .figure {
+    display: none;
+  }
+}
+
+@media (min-width: 1280px) {
+  body.about .row.about-obj-index-1 .number {
+    order: 3;
+    margin-left: 0;
+  }
+  body.about .row.about-obj-index-1 .figure {
+    order: 2;
+  }
+  body.about .row.about-obj-index-1 .descr {
+    order: 1;
+    margin-left: 8.33333333%;
+  }
+}
+
+body.about .row.about-people-head {
+  margin-bottom: 8.0rem;
+}
+
+body.about .row.about-people-head h2 {
+  font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-size: 4rem;
+  color: #003E62;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+}
+
+body.about .row.about-director .pic {
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+
+body.about .row.about-director .pic img {
+  border-radius: 116px;
+}
+
+body.about .row.about-director .name {
+  font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-size: 2.0rem;
+  color: #003E62;
+  line-height: 2.0rem;
+  text-align: center;
+  margin-bottom: .8rem;
+}
+
+body.about .row.about-director .title {
+  font-family: "BrandonGrotesque-Reg", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-size: 1.8rem;
+  color: #1C6F81;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 1.6rem;
+  line-height: 100%;
+}
+
+body.about .row.about-director .bio {
+  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-size: 1.8rem;
+  color: #003E62;
+  line-height: 2.6rem;
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+
+body.about .row.about-director .morelink-parent {
+  text-align: center;
+}
+
+body.about .row h3.about-staff,
+body.about .row h3.about-partners {
+  font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-size: 2.8rem;
+  color: #003E62;
+  line-height: 100%;
+  text-align: center;
+  margin-top: 8.8rem;
+  margin-bottom: 8.8rem;
+  width: 100%;
+}
+
+body.about .row.about-partners .col, body.about .row.about-staff .col {
+  margin-left: 4rem;
+  margin-right: 4rem;
+  padding: 0;
+}
+
+body.about .row.about-partners .pic, body.about .row.about-staff .pic {
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+
+body.about .row.about-partners .pic img, body.about .row.about-staff .pic img {
+  border-radius: 116px;
+}
+
+body.about .row.about-partners .name, body.about .row.about-staff .name {
+  font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-size: 2.0rem;
+  color: #003E62;
+  line-height: 2.0rem;
+  text-align: center;
+  margin-bottom: .8rem;
+}
+
+body.about .row.about-partners .title, body.about .row.about-staff .title {
+  font-family: "BrandonGrotesque-Reg", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-size: 1.8rem;
+  color: #1C6F81;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 1.6rem;
+  line-height: 100%;
+}
+
+body.about .row.about-partners .bio, body.about .row.about-staff .bio {
+  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-size: 1.8rem;
+  color: #003E62;
+  line-height: 2.6rem;
+  text-align: center;
+  margin-bottom: 2.4rem;
+  display: none;
+}
+
+body.about .row.about-partners .morelink-parent, body.about .row.about-staff .morelink-parent {
+  text-align: center;
+  margin-bottom: 6.4rem;
+}
+
+body.about .row.about-partners {
+  margin-bottom: 9.6rem;
 }
 
 /*# sourceMappingURL=style.css.map */

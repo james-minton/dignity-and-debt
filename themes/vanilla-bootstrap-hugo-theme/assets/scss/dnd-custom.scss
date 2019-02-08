@@ -228,7 +228,8 @@ button.navbar-toggler {
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     //
     &:active,
-    &:hover {
+    &:hover,
+    &:focus {
       box-shadow: 5.5px 5.5px 0 $darkblue;
       transform: translate(1px, 1px);
       color: $darkblue;
@@ -613,9 +614,216 @@ h3.who-we-are,
   }
 }
 
-
+//////
 ////// About
+body.about {
 
+  .row {
+    &.about-hero {
+      .col {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    &.about-descr {
+      margin-top: -100px;
+      margin-bottom: 14rem;
+      .col {
+        background-color: $aqua;
+        padding: 4rem;
+
+        h2 {
+          font-family: $brandongrotesque-bold;
+          // line-height: 2.6rem;
+          font-size: 4rem;
+          text-transform: uppercase;
+        }
+
+        p {
+          font-family: $font-family-base;
+          line-height: 2.6rem;
+          font-size: 1.8rem;
+
+        }
+      }
+    }
+
+    &.about-objective {
+      margin-bottom: 11.6rem;
+      .number {
+        span {
+          font-family: $brandongrotesque-bold;
+          font-size: 7rem;
+          color: $aqualink;
+        }
+      }
+
+      .descr {
+        h3 {
+          font-family: $brandongrotesque-bold;
+          font-size: 2.8rem;
+          line-height: 3.2rem;
+          color: $dnd-navy;
+          text-transform: uppercase;
+        }
+
+        p {
+          font-family: $font-family-base;
+          font-size: 1.8rem;
+          line-height: 2.6rem;
+          color: $dnd-navy;
+        }
+      }
+
+      .figure {
+        min-width: 180px;
+      }
+
+      @media (max-width: 768px) {
+        .figure {
+          display: none;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      &.about-obj-index-1 {
+        .number {
+          order: 3;
+          margin-left: 0;
+        }
+
+        .figure {
+          order: 2;
+        }
+
+        .descr {
+          order: 1;
+          margin-left: 8.33333333%;
+        }
+      }
+    }
+
+    &.about-people-head {
+      margin-bottom: 8.0rem;
+      h2 {
+        font-family: $brandongrotesque-bold;
+        font-size: 4rem;
+        // line-height: 3.2rem;
+        color: $dnd-navy;
+        text-transform: uppercase;
+        text-align: center;
+        width: 100%;
+      }
+    }
+
+    &.about-director {
+      .pic {
+        text-align: center;
+        margin-bottom: 2.4rem;
+        img {
+          border-radius: 116px;
+        }
+      }
+      .name {
+        font-family: $brandongrotesque-bold;
+        font-size: 2.0rem;
+        color: $dnd-navy;
+        line-height: 2.0rem;
+        text-align: center;
+        margin-bottom: .8rem;
+      }
+      .title {
+        font-family: $brandongrotesque-reg;
+        font-size: 1.8rem;
+        color: $dnd-darkgreen;
+        font-style: italic;
+        text-align: center;
+        margin-bottom: 1.6rem;
+        line-height: 100%;
+      }
+      .bio {
+        font-family: $font-family-base;
+        font-size: 1.8rem;
+        color: $dnd-navy;
+        line-height: 2.6rem;
+        text-align: center;
+        margin-bottom: 2.4rem;
+      }
+      .morelink-parent {
+        text-align: center;
+      }
+    }
+
+    h3.about-staff,
+    h3.about-partners {
+      font-family: $brandongrotesque-bold;
+      font-size: 2.8rem;
+      color: $dnd-navy;
+      line-height: 100%;
+      text-align: center;
+      margin-top: 8.8rem;
+      margin-bottom: 8.8rem;
+      width: 100%;
+    }
+
+    &.about-partners,
+    &.about-staff {
+      // width: 90%;
+      // margin-left: auto !important;
+      // margin-right: auto !important;
+
+      .col {
+        margin-left: 4rem;
+        margin-right: 4rem;
+        padding: 0;
+      }
+
+      .pic {
+        text-align: center;
+        margin-bottom: 2.4rem;
+        img {
+          border-radius: 116px;
+        }
+      }
+      .name {
+        font-family: $brandongrotesque-bold;
+        font-size: 2.0rem;
+        color: $dnd-navy;
+        line-height: 2.0rem;
+        text-align: center;
+        margin-bottom: .8rem;
+      }
+      .title {
+        font-family: $brandongrotesque-reg;
+        font-size: 1.8rem;
+        color: $dnd-darkgreen;
+        font-style: italic;
+        text-align: center;
+        margin-bottom: 1.6rem;
+        line-height: 100%;
+      }
+      .bio {
+        font-family: $font-family-base;
+        font-size: 1.8rem;
+        color: $dnd-navy;
+        line-height: 2.6rem;
+        text-align: center;
+        margin-bottom: 2.4rem;
+        display: none;
+      }
+      .morelink-parent {
+        text-align: center;
+        margin-bottom: 6.4rem;
+      }
+    }
+
+    &.about-partners {
+      margin-bottom: 9.6rem;
+    }
+  }
+}
 
 
 

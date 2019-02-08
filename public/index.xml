@@ -48,6 +48,24 @@
     </item>
     
     <item>
+      <title>Future Item 03</title>
+      <link>/events/future-item-04/</link>
+      <pubDate>Thu, 25 Apr 2019 13:03:03 -0600</pubDate>
+      
+      <guid>/events/future-item-04/</guid>
+      <description>future event contents</description>
+    </item>
+    
+    <item>
+      <title>Future Item 03</title>
+      <link>/events/future-item-05/</link>
+      <pubDate>Thu, 25 Apr 2019 13:03:03 -0600</pubDate>
+      
+      <guid>/events/future-item-05/</guid>
+      <description>future event contents</description>
+    </item>
+    
+    <item>
       <title>Excepteur sint occaecat cupidatat non proident</title>
       <link>/news/future-item-02/</link>
       <pubDate>Mon, 25 Mar 2019 13:02:59 -0600</pubDate>
