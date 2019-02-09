@@ -3,12 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/news/future-item-01/</loc>
+    <loc>/events/future-item-01/</loc>
     <lastmod>2020-02-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/events/future-item-01/</loc>
+    <loc>/news/future-item-01/</loc>
     <lastmod>2020-02-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -30,14 +30,6 @@
   <url>
     <loc>/events/future-item-05/</loc>
     <lastmod>2019-04-25T13:03:03-06:00</lastmod>
-<<<<<<< HEAD
-  </url>
-  
-  <url>
-    <loc>/news/future-item-02/</loc>
-    <lastmod>2019-03-25T13:02:59-06:00</lastmod>
-=======
->>>>>>> jm-home
   </url>
   
   <url>
