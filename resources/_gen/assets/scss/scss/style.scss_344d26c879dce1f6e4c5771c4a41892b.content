@@ -11884,4 +11884,20 @@ body.about .row.about-partners {
   margin-bottom: 9.6rem;
 }
 
+body.about .modal {
+  top: 25%;
+}
+
+body.about .modal.fade .modal-dialog {
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  -webkit-transition: none !important;
+  transition: none !important;
+  -moz-transform: none !important;
+  -ms-transform: none !important;
+  -o-transform: none !important;
+  -webkit-transform: none !important;
+  transform: none !important;
+}
+
 /*# sourceMappingURL=style.css.map */
