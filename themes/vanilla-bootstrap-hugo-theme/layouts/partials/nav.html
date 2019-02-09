@@ -19,7 +19,7 @@
               {{ end }}
               <!-- {{ $icon := printf "<i data-feather=\"%s\"></i>" .Pre }} -->
               {{ $text := print .Name | safeHTML }}
-                  <a class="nav-item nav-link {{ $active }}" tabindex="0" href="{{ .URL }}">{{ $text }}</a>
+                  <a class="nav-item nav-link {{ $active }}" tabindex="0" href="#">{{ $text }}</a>
             {{ end }}
         </div>
     </div>
