@@ -206,6 +206,10 @@ img {
   }
   img.princeton-logo {
     width: 192px;
+    margin-bottom: 2.4rem;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+    }
   }
   .social-and-copy {
     margin-top: 5.6rem;
