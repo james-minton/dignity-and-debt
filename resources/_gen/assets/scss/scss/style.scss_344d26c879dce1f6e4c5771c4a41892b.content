@@ -12459,6 +12459,10 @@ img.float-left {
   color: #C9E9EA;
 }
 
+#footer img.princeton-logo {
+  width: 192px;
+}
+
 #footer .social-and-copy {
   margin-top: 5.6rem;
   text-align: left;
