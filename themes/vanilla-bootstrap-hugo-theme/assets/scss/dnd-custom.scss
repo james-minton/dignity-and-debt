@@ -563,6 +563,8 @@ h3.who-we-are,
     height: 336px;
     text-align: center;
     margin-top: 4.4rem;
+    color: $white;
+    text-decoration: none;
 
     @media (max-width: 996px) {
       float: none !important;
@@ -1108,8 +1110,112 @@ body.type-projects {
 // Meetings Section
 .kind-section.type-meetings {
   .row {
+
+    // &.staytuned,
+    // &.whydignity,
+    // &.about-roundtable {
+    //   padding: 4.0rem;
+    // }
+
+    &.news-banner {
+      .column {
+        background-color: $aqua;
+        justify-content: flex-start;
+        padding: 4rem;
+        margin-right: auto;
+        margin-left: auto;
+        color: $dnd-navy;
+
+        h3 {
+          font-family: $brandongrotesque-bold;
+          font-size: 2.8rem;
+          text-transform: uppercase;
+          color: $dnd-navy;
+        }
+        span {
+          font-family: $brandongrotesque-reg;
+          font-size: 1.8rem;
+          line-height: 2.4rem;
+        }
+      }
+    }
+
+    &.whydignity {
+      .column {
+        h3 {
+          font-size: 4rem;
+          text-transform: uppercase;
+          color: $dnd-navy;
+        }
+        span {
+          font-family: $font-family-base;
+          font-size: 1.8rem;
+          line-height: 2.6rem;
+        }
+      }
+    }
+
+    &.the-roundtable {
+      margin-top: 14.4rem;
+      .img-parent {
+        min-width: 212px;
+        @media (max-width: 996px) {
+          margin-bottom: 4.6rem;
+        }
+      }
+      .pic {
+        margin-bottom: 4.8rem;
+      }
+      .pic,
+      .morelink-parent {
+        text-align: center;
+      }
+      img {
+        width: 212px;
+        height: 212px;
+        border-radius: 106px;
+      }
+      .text {
+        h3 {
+          font-family: $brandongrotesque-bold;
+          font-size: 4rem;
+          color: $dnd-navy;
+          text-transform: uppercase;
+        }
+        span {
+          font-family: $font-family-base;
+          font-size: 1.8rem;
+          line-height: 2.6rem;
+          color: $dnd-navy;
+        }
+      }
+    }
+
+    &.about-roundtable {
+      margin-top: 3.6rem;
+
+      .column {
+
+        h3 {
+          font-size: 4rem;
+        }
+        span {
+          font-family: $font-family-base;
+          font-size: 1.8rem;
+          line-height: 2.6rem;
+          color: $dnd-navy;
+        }
+      }
+    }
+
     &.hearfrom {
       text-align: center;
+      margin-top: 14.4rem;
+
+      &>div {
+        -webkit-flex: 0;
+        flex-shrink: 0;
+      }
 
       iframe {
         width: 460px;
@@ -1117,9 +1223,22 @@ body.type-projects {
       }
 
       span.desc {
+        width: 460px;
+        display: block;
+        margin: 2.4rem auto 6.4rem;
+        text-align: left;
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+        font-family: $brandongrotesque-bold;
+        color: $dnd-darkgreen;
+      }
 
+      &:last-child {
+        margin-bottom: 4.6rem;
       }
     }
+
+
   }
 }
 // Meetings Single (Program TBD)

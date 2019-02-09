@@ -47,7 +47,7 @@
     
     
     
-    <link rel="stylesheet" href="/style.min.fd047fa7c17578b14874127bae84bca99dcf12e9f47c79a6c0fa9f89f9b98d31.css">
+    <link rel="stylesheet" href="/style.min.62b443803949dfd470e3e9d4c64f02b483b476ffce9bcf1b7365b7f8b956ba46.css">
   
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
@@ -63,18 +63,65 @@
   
   
   
-  <title>Future Item 03 | Dignity and Debt</title>
+  <title>Future Item 03 | Dignity and Debt testing</title>
   <style>
+   
+  body {
+    color: black;
+  }
 
 
   
 
-
+@media (min-width: 769px) {
+  .home .container.parent {
+    background-color: rgba(10, 61, 95, 0.3) !important;
+    background-blend-mode: multiply;
+    background-size: 1440px auto;
+    background-position: 43% 0;
+    background-repeat: no-repeat;
+  }
+  .home.scroll-top nav {
+    background-image: transparent;
+    background-color: transparent !important;
+    box-shadow: none;
+  }
+  .home nav {
+    background-color: rgba(255, 255, 255, 1) !important;
+    -webkit-box-shadow: 0 0 transparent, 0 0 transparent, 0 5px 5px -4px rgba(0, 0, 0, 0.10);
+    -moz-box-shadow: 0 0 transparent, 0 0 transparent, 0 5px 5px -4px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 0 transparent, 0 0 transparent, 0 5px 5px -4px rgba(0, 0, 0, 0.10);
+    transition: background-color 200ms ease-in-out;
+  }
+  .not-home.scroll-top nav {
+    box-shadow: none;
+  }
+  .not-home nav {
+    background-color: rgba(255, 255, 255, 1) !important;
+    -webkit-box-shadow: 0 0 transparent, 0 0 transparent, 0 5px 5px -4px rgba(0, 0, 0, 0.10);
+    -moz-box-shadow: 0 0 transparent, 0 0 transparent, 0 5px 5px -4px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 0 transparent, 0 0 transparent, 0 5px 5px -4px rgba(0, 0, 0, 0.10);
+    transition: none;
+  }
+}
+#home-jumbotron {
+  background-color: rgba(10, 61, 95, 0.3);
+  background-blend-mode: multiply;
+  background-position: 43% -68px;
+  background-size: 1440px auto;
+  background-repeat: no-repeat;
+}
+@media (max-width: 768px) {
+  #home-jumbotron {
+    background-position: 67% -40px;
+  }
+}
 </style>
 
 </head>
 
-  <body class="h-100  kind-page   type-events  future-item-03 ">
+  <body class="h-100  kind-page   type-events  future-item-03 scroll-top not-home">
+    
     
     <div class="container parent">
       <nav class="navbar navbar-expand-md bg-white sticky-top navbar-light">

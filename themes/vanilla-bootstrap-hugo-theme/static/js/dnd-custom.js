@@ -3,31 +3,33 @@
     var $ = jQuery;
 
     function checkScroll(y) {
-      if (y <= 649) {
-          $('body.home').addClass('scroll-top');
-          // $('body.home').removeClass('scroll-header');
-          // $('.home.scroll-header nav').css('background-position-y', '-' + y + 'px');
-      } else if (y >= 650) {
-          // $('body.home').addClass('scroll-header');
-          $('body.home').removeClass('scroll-top');
-          // $('.home.scroll-header nav').css('background-position-y', '-' + y + 'px');
+      if ($('body.home').length >= 1) {
+        // If the scroll is at the top, add class.
+        // Transition comes farther down the page for
+        // the the front page.
+        if (y <= 649) {
+            $('body').addClass('scroll-top');
+        } else if (y >= 650) {
+            $('body').removeClass('scroll-top');
+        }
+      } else {
+        if (y <= 0) {
+            $('body').addClass('scroll-top');
+        } else {
+            $('body').removeClass('scroll-top');
+        }
       }
-
-      // else if (y >= 601) {
-      //     $('body.home').removeClass('scroll-header');
-      //     $('body.home').removeClass('scroll-top');
-      // }
     }
     $( document ).ready(function() {
         // console.log( "ready!" );
         // If on the home page, add scrollY tracking class to body tag.
-        if ($('body.home').length >= 1) {
+        // if ($('body.home').length >= 1) {
           // When the window is scrolled, check scroll position.
           $( window ).scroll(function() {
               var t = $(window).scrollTop();
               checkScroll(t);
           });
-        }
+        // }
         // Check on page load as well.
         var t = $(window).scrollTop();
         checkScroll(t);

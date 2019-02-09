@@ -1,5 +1,6 @@
 ---
-title: "This is a sessions item 1"
+title: "2018 program"
+type: "program"
 subtitle: "This is the session 1 subtitle"
 date: "2019-01-25"
 image: ""

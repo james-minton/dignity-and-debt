@@ -120,21 +120,21 @@
     </item>
     
     <item>
+      <title>2018 program</title>
+      <link>/meetings/2018-program/</link>
+      <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/meetings/2018-program/</guid>
+      <description>This is some page content for session 1</description>
+    </item>
+    
+    <item>
       <title>This is a session, session 2</title>
       <link>/meetings/new-sessions-item-02/</link>
       <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>/meetings/new-sessions-item-02/</guid>
       <description>This is some page content for session 2</description>
-    </item>
-    
-    <item>
-      <title>This is a sessions item 1</title>
-      <link>/meetings/new-sessions-item-01/</link>
-      <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/meetings/new-sessions-item-01/</guid>
-      <description>This is some page content for session 1</description>
     </item>
     
     <item>
