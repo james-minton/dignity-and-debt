@@ -4347,7 +4347,7 @@ tbody.collapse.show {
   padding: 0.75rem 1rem;
   margin-bottom: 1rem;
   list-style: none;
-  background-color: #e9ecef;
+  background-color: transparent;
   border-radius: 0.25rem;
 }
 
@@ -12302,6 +12302,15 @@ h3 {
   font-size: 2.4rem;
 }
 
+a {
+  text-decoration: underline;
+  color: #1C6F81;
+}
+
+a:hover {
+  color: #0e3942;
+}
+
 .container.parent {
   padding-right: 0;
   padding-left: 0;
@@ -12338,6 +12347,7 @@ nav.navbar-light .navbar-nav .nav-link {
   padding-right: 2rem;
   padding-left: 2rem;
   padding-top: 3.4rem;
+  text-decoration: none;
 }
 
 nav.navbar-light .navbar-nav .nav-link.active, nav.navbar-light .navbar-nav .nav-link:hover {
@@ -12367,6 +12377,46 @@ nav.navbar-light .navbar-nav .nav-link.active, nav.navbar-light .navbar-nav .nav
 
 button.navbar-toggler {
   border: 0;
+}
+
+.breadcrumb-parent {
+  margin-top: 3.6rem;
+}
+
+.breadcrumb-parent .breadcrumb {
+  font-family: "BrandonGrotesque-Med", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-size: 1.8rem;
+  color: #1C6F81;
+  text-decoration: none;
+  padding-left: 3.6rem;
+  padding-top: 0;
+}
+
+.breadcrumb-parent .breadcrumb a,
+.breadcrumb-parent .breadcrumb .sep {
+  color: #B5BEC4;
+  text-decoration: none;
+}
+
+.breadcrumb-parent .breadcrumb .sep {
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
+}
+
+.row.breaker {
+  height: 270px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 5.6rem 0;
+}
+
+img.float-right {
+  margin-left: 3.2rem;
+}
+
+img.float-left {
+  margin-right: 3.2rem;
 }
 
 #footer {
@@ -12465,6 +12515,7 @@ button.navbar-toggler {
   border: none;
   padding-top: 1rem;
   border-radius: 0;
+  text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
@@ -13177,6 +13228,93 @@ body.about .modal.fade .modal-dialog {
   -o-transform: none !important;
   -webkit-transform: none !important;
   transform: none !important;
+}
+
+body.type-projects.kind-section .row.jumbotron {
+  height: 310px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 6.4rem;
+}
+
+body.type-projects.kind-section .row h2 {
+  font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-size: 3.2rem;
+  color: #003E62;
+  line-height: 4rem;
+  text-transform: uppercase;
+}
+
+body.type-projects.kind-section .row h2:after {
+  content: "";
+  display: block;
+  width: 4.8rem;
+  border-bottom: solid 8px #C9E9EA;
+  margin: 2.4rem 0 3.6rem;
+}
+
+body.type-projects.kind-section .row .desc {
+  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-size: 1.8rem;
+  color: #003E62;
+  line-height: 2.6rem;
+}
+
+body.type-projects.kind-section .row .morelink-parent {
+  margin-top: 4.2rem;
+  margin-bottom: 5.6rem;
+}
+
+body.type-projects.kind-section .row .morelink-parent:after {
+  content: "";
+  display: block;
+  width: 100%;
+  border-bottom: solid 1px #C9E9EA;
+  margin: 5.6rem 0 3.6rem;
+}
+
+body.type-projects.kind-page .row.jumbotron {
+  height: 469px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 3.8rem;
+}
+
+body.type-projects.kind-page .row h2 {
+  font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-size: 3.2rem;
+  color: #003E62;
+  line-height: 4rem;
+  text-transform: uppercase;
+  margin-top: 8rem;
+  margin-bottom: 4.8rem;
+}
+
+body.type-projects.kind-page .row.content {
+  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  margin-bottom: 5.6rem;
+  color: #003E62;
+}
+
+body.type-projects.kind-page .row.content p {
+  margin-top: 1.8rem;
+  bottom: 1.8rem;
+}
+
+body.type-projects.kind-page .row.content h1,
+body.type-projects.kind-page .row.content h2,
+body.type-projects.kind-page .row.content h3,
+body.type-projects.kind-page .row.content h4,
+body.type-projects.kind-page .row.content h5,
+body.type-projects.kind-page .row.content h6 {
+  font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-size: 2.8rem;
+  color: #003E62;
+  line-height: 3.2rem;
+  text-transform: uppercase;
+  margin-top: 3.8rem;
 }
 
 /*# sourceMappingURL=style.css.map */

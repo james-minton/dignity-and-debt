@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/projects/global-labs/</loc>
+    <lastmod>2019-01-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/projects/understanding-whats-fair/</loc>
+    <lastmod>2019-01-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/projects/getting-respect/</loc>
+    <lastmod>2019-01-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/events/future-item-01/</loc>
     <lastmod>2020-02-25T00:00:00+00:00</lastmod>
   </url>
@@ -33,6 +48,11 @@
   </url>
   
   <url>
+    <loc>/news/future-item-02/</loc>
+    <lastmod>2019-03-25T13:02:59-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/events/future-item-02/</loc>
     <lastmod>2019-03-25T13:02:59-06:00</lastmod>
   </url>
@@ -48,17 +68,7 @@
   </url>
   
   <url>
-    <loc>/projects/new-project-item-01/</loc>
-    <lastmod>2019-01-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/projects/new-project-item-02/</loc>
-    <lastmod>2019-01-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/projects/new-project-item-03/</loc>
+    <loc>/projects/</loc>
     <lastmod>2019-01-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -121,12 +131,6 @@
   <url>
     <loc>/news/</loc>
     <lastmod>2020-02-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/projects/</loc>
-    <lastmod>2019-01-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
