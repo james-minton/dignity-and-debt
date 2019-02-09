@@ -10,12 +10,14 @@
         {{ with $.Site.GetPage "page" "uploads/_index.md" }}
             {{ with .Resources.GetMatch $img }}
                   {{$img400 := .Fill "296x185 Center"}}
-                  <img class="" src="{{ $img400.RelPermalink }}" width="" height="200" alt="News announcement photo">
+                  <div class="news-img-container" style="background-image: url('/uploads/wherry-seminar-table.jpg')"></div>
             {{ end }}
         {{ end }}
         <div class="home-news-item-one">
-            <a class="link-news" href="{{ .Permalink }}" tabindex="0">{{ .Title }}</a>
+            <a class="link-news" href="#" tabindex="0">{{ .Title }}</a>
             <time datetime="{{ $dateTime }}" tabindex="0">{{ .PublishDate.Format $dateFormat }}</time>
+            {{ .Content }}
+            <a class="btn btn-custom" href="{{ "#" | absURL }}" tabindex="0" aria-label="Go to About">READ MORE</a>
         </div>    
         <!-- <p tabindex="0">{{ .Content }}</p> -->
         <!-- {{ partial "news-date-and-tags.html" . }} -->
