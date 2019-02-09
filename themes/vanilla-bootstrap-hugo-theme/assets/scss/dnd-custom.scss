@@ -444,7 +444,7 @@ h3.who-we-are,
   margin-left: 1.6rem;
   margin-right: 1.6rem;
   display: block;
-  
+
 
   @include media-breakpoint-up(md) {
     justify-content: flex-start;
@@ -468,7 +468,7 @@ h3.who-we-are,
     height: auto;
 
     @include media-breakpoint-up(sm) {
-      
+
       height: 100%;
       width: 360px;
       display: block;
@@ -487,7 +487,7 @@ h3.who-we-are,
 
   .text.flex-child {
     flex: 1 1 3.6rem;
-    
+
     font-family: $brandongrotesque-med;
     font-size: 2.2rem;
     line-height: 2.8rem;
@@ -499,7 +499,7 @@ h3.who-we-are,
     }
     .blurb {
       @include media-breakpoint-down(md) {
-        
+
       }
     }
   }
@@ -1273,7 +1273,114 @@ body.type-projects {
 
   }
 }
-// Meetings Single (Program TBD)
+
+// Program page
+.kind-section.type-2018-program {
+  .row {
+    h2 {
+      font-family: $brandongrotesque-bold;
+      font-size: 4rem;
+      color: $dnd-navy;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 0;
+    }
+    &.subtitle {
+      margin-top: 5.6rem;
+      margin-bottom: 11.2rem
+    }
+    &.dig-roundtable {
+      margin-bottom: 7.2rem;
+    }
+    h3 {
+      font-family: $brandongrotesque-bold;
+      font-size: 2.8rem;
+      color: $dnd-navy;
+      text-align: center;
+      text-transform: uppercase;
+      line-height: 3.2rem;
+    }
+    &.logistics {
+      text-align: center;
+
+      span {
+        display: block;
+        width: 100%;
+        &.location {
+          font-family: $brandongrotesque-bold;
+          font-size: 2.8rem;
+          color: $dnd-navy;
+        }
+        &.date {
+          font-family: $brandongrotesque-reg;
+          font-style: italic;
+          font-size: 2.8rem;
+          color: $dnd-navy;
+        }
+      }
+    }
+    &.news-banner {
+      margin-top: 5.6rem;
+      margin-bottom: 5.6rem;
+      .column {
+        background-color: $aqua;
+        justify-content: flex-start;
+        padding: 4rem;
+        margin-right: auto;
+        margin-left: auto;
+        color: $dnd-navy;
+
+        h3 {
+          font-family: $brandongrotesque-bold;
+          font-size: 2.8rem;
+          text-transform: uppercase;
+          color: $dnd-navy;
+          text-align: left;
+        }
+        span {
+          font-family: $brandongrotesque-reg;
+          font-size: 1.8rem;
+          line-height: 2.4rem;
+        }
+      }
+    }
+    &.whydignity {
+
+    }
+    &.people {
+      text-align: center;
+      .column {
+        padding: 3.2rem;
+      }
+      span {
+        width: 100%;
+        display: block;
+      }
+      .name {
+        font-family: $brandongrotesque-bold;
+        font-size: 2.2rem;
+        line-height: 2.6rem;
+        color: $dnd-navy;
+      }
+      .institution {
+        font-family: $brandongrotesque-reg;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+        color: $dnd-darkgreen;
+        font-style: italic;
+      }
+      .extra {
+        font-family: $brandongrotesque-reg;
+        font-size: 2.2rem;
+        line-height: 2.6rem;
+        color: $dnd-navy;
+      }
+    }
+  }
+}
+
+
+
 
 ////// News
 ////// Events

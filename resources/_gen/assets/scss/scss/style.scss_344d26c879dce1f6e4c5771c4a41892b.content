@@ -13471,4 +13471,116 @@ body.type-projects.kind-page .row.content h6 {
   margin-bottom: 4.6rem;
 }
 
+.kind-section.type-2018-program .row h2 {
+  font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-size: 4rem;
+  color: #003E62;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.kind-section.type-2018-program .row.subtitle {
+  margin-top: 5.6rem;
+  margin-bottom: 11.2rem;
+}
+
+.kind-section.type-2018-program .row.dig-roundtable {
+  margin-bottom: 7.2rem;
+}
+
+.kind-section.type-2018-program .row h3 {
+  font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-size: 2.8rem;
+  color: #003E62;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 3.2rem;
+}
+
+.kind-section.type-2018-program .row.logistics {
+  text-align: center;
+}
+
+.kind-section.type-2018-program .row.logistics span {
+  display: block;
+  width: 100%;
+}
+
+.kind-section.type-2018-program .row.logistics span.location {
+  font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-size: 2.8rem;
+  color: #003E62;
+}
+
+.kind-section.type-2018-program .row.logistics span.date {
+  font-family: "BrandonGrotesque-Reg", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-style: italic;
+  font-size: 2.8rem;
+  color: #003E62;
+}
+
+.kind-section.type-2018-program .row.news-banner {
+  margin-top: 5.6rem;
+  margin-bottom: 5.6rem;
+}
+
+.kind-section.type-2018-program .row.news-banner .column {
+  background-color: #C9E9EA;
+  justify-content: flex-start;
+  padding: 4rem;
+  margin-right: auto;
+  margin-left: auto;
+  color: #003E62;
+}
+
+.kind-section.type-2018-program .row.news-banner .column h3 {
+  font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  color: #003E62;
+  text-align: left;
+}
+
+.kind-section.type-2018-program .row.news-banner .column span {
+  font-family: "BrandonGrotesque-Reg", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+
+.kind-section.type-2018-program .row.people {
+  text-align: center;
+}
+
+.kind-section.type-2018-program .row.people .column {
+  padding: 3.2rem;
+}
+
+.kind-section.type-2018-program .row.people span {
+  width: 100%;
+  display: block;
+}
+
+.kind-section.type-2018-program .row.people .name {
+  font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-size: 2.2rem;
+  line-height: 2.6rem;
+  color: #003E62;
+}
+
+.kind-section.type-2018-program .row.people .institution {
+  font-family: "BrandonGrotesque-Reg", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  color: #1C6F81;
+  font-style: italic;
+}
+
+.kind-section.type-2018-program .row.people .extra {
+  font-family: "BrandonGrotesque-Reg", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-size: 2.2rem;
+  line-height: 2.6rem;
+  color: #003E62;
+}
+
 /*# sourceMappingURL=style.css.map */
