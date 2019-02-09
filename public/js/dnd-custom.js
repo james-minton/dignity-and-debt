@@ -3,11 +3,20 @@
     var $ = jQuery;
 
     function checkScroll(y) {
-      if (y <= 0) {
+      if (y <= 649) {
           $('body.home').addClass('scroll-top');
-      } else {
+          // $('body.home').removeClass('scroll-header');
+          // $('.home.scroll-header nav').css('background-position-y', '-' + y + 'px');
+      } else if (y >= 650) {
+          // $('body.home').addClass('scroll-header');
           $('body.home').removeClass('scroll-top');
+          // $('.home.scroll-header nav').css('background-position-y', '-' + y + 'px');
       }
+
+      // else if (y >= 601) {
+      //     $('body.home').removeClass('scroll-header');
+      //     $('body.home').removeClass('scroll-top');
+      // }
     }
     $( document ).ready(function() {
         // console.log( "ready!" );

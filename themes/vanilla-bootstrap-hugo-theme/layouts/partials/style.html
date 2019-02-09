@@ -5,13 +5,30 @@
     /* {{$img1280 := .Fill "1280x640 TopLeft"}} */
     {{$img1440 := .Fill "1440x720 TopLeft"}}
     @media (min-width: 769px) {
-      .home.scroll-top nav {
+      .home .container.parent {
         background-image: url('{{ $img1440.RelPermalink }}');
         background-color: rgba(10, 61, 95, 0.3) !important;
         background-blend-mode: multiply;
         background-size: 1440px auto;
         background-position: 43% 0;
         background-repeat: no-repeat;
+      }
+
+      .home.scroll-top nav {
+        background-image: transparent; /* url('{{ $img1440.RelPermalink }}'); */
+        background-color: transparent !important;/* rgba(10, 61, 95, 0.3) !important;*/
+        /* background-blend-mode: multiply;
+        background-size: 1440px auto;
+        background-position: 43% 0;
+        background-repeat: no-repeat; */
+      }
+      .home.scroll-header nav {
+        /* background-image: url('{{ $img1440.RelPermalink }}');
+        background-color: rgba(10, 61, 95, 0.3) !important;
+        background-blend-mode: multiply;
+        background-size: 1440px auto;
+        background-position-x: 43%;
+        background-repeat: no-repeat; */
       }
       .home nav {
         background-color: rgba(255, 255, 255, 1) !important;

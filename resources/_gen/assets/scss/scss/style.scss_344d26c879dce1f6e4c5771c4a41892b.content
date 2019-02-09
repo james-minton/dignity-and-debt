@@ -13317,4 +13317,13 @@ body.type-projects.kind-page .row.content h6 {
   margin-top: 3.8rem;
 }
 
+.kind-section.type-meetings .row.hearfrom {
+  text-align: center;
+}
+
+.kind-section.type-meetings .row.hearfrom iframe {
+  width: 460px;
+  height: 258px;
+}
+
 /*# sourceMappingURL=style.css.map */
