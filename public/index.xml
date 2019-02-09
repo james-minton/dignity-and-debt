@@ -12,21 +12,21 @@
     
     
     <item>
-      <title>Excepteur sint occaecat cupidatat non proident</title>
-      <link>/news/future-item-01/</link>
-      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/news/future-item-01/</guid>
-      <description>future item contents</description>
-    </item>
-    
-    <item>
       <title>Future Item 01</title>
       <link>/events/future-item-01/</link>
       <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>/events/future-item-01/</guid>
       <description>future event contents</description>
+    </item>
+    
+    <item>
+      <title>Sociologist Wherry</title>
+      <link>/news/future-item-01/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/news/future-item-01/</guid>
+      <description>future item contents</description>
     </item>
     
     <item>
@@ -75,12 +75,12 @@
     </item>
     
     <item>
-      <title>Excepteur sint occaecat cupidatat non proident</title>
+      <title>Sociologist Wherry: Studying money and human values</title>
       <link>/news/new-item-05/</link>
       <pubDate>Fri, 25 Jan 2019 12:11:13 -0600</pubDate>
       
       <guid>/news/new-item-05/</guid>
-      <description>This is some more content</description>
+      <description>Frederick Wherry, a professor of sociology at Princeton, calls himself an “accidental sociologist.” Growing up in South Carolina with his twin sister and four brothers, he wanted to be a civil rights lawyer.</description>
     </item>
     
     <item>
@@ -147,7 +147,7 @@
     </item>
     
     <item>
-      <title>Excepteur sint occaecat cupidatat non proident</title>
+      <title>Sociologist Wherry</title>
       <link>/news/new-test-news/</link>
       <pubDate>Mon, 21 Jan 2019 00:00:00 +0000</pubDate>
       
@@ -156,7 +156,7 @@
     </item>
     
     <item>
-      <title>Excepteur sint occaecat cupidatat non proident</title>
+      <title>Sociologist Wherry</title>
       <link>/news/third-news-item/</link>
       <pubDate>Tue, 15 Jan 2019 00:00:00 +0000</pubDate>
       
