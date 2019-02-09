@@ -17,7 +17,7 @@
             <a class="link-news" href="#" tabindex="0">{{ .Title }}</a>
             <time datetime="{{ $dateTime }}" tabindex="0">{{ .PublishDate.Format $dateFormat }}</time>
             {{ .Content }}
-            <a class="btn btn-custom" href="{{ "#" | absURL }}" tabindex="0" aria-label="Go to About">READ MORE</a>
+            <a class="btn btn-custom" target="_blank" href="{{ "https://www.princeton.edu/news/2018/05/10/sociologist-wherry-studying-money-and-human-values" | absURL }}" tabindex="0" aria-label="Go to news article">READ MORE</a>
         </div>    
         <!-- <p tabindex="0">{{ .Content }}</p> -->
         <!-- {{ partial "news-date-and-tags.html" . }} -->
