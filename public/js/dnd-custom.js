@@ -53,8 +53,10 @@
             var image = $button.parent().siblings('.pic').html();
             console.log('image = ' + image);
             // Set contents
-            $('#modalLongTitle').text(name);
-            $('#peopleBioModal .modal-body').html(title + bio + image);
+            $('#modalImg').html(image);
+            $('#modalName').text(name);
+            $('#modalTitle').html(title);
+            $('#modalBio').html(bio);
             $('#peopleBioModal').modal('show');
           });
         }

@@ -13257,8 +13257,17 @@ body.about .row.about-partners {
   margin-bottom: 9.6rem;
 }
 
+body.about .modal-backdrop {
+  background-color: #ffffff;
+}
+
+body.about .modal-backdrop.show {
+  opacity: 0;
+}
+
 body.about .modal {
-  top: 25%;
+  top: 6.8rem;
+  background-color: #fff;
 }
 
 body.about .modal.fade .modal-dialog {
@@ -13271,6 +13280,94 @@ body.about .modal.fade .modal-dialog {
   -o-transform: none !important;
   -webkit-transform: none !important;
   transform: none !important;
+}
+
+body.about .modal .modal-dialog {
+  max-width: 838px;
+}
+
+body.about .modal .modal-dialog .modal-content {
+  border-radius: 0;
+  border: none;
+  box-shadow: 6px 7px 13px 4px rgba(0, 0, 0, 0.1);
+}
+
+body.about .modal .modal-dialog .modal-content .modal-body {
+  padding: 0;
+}
+
+body.about .modal .modal-dialog .modal-content .modal-body .row {
+  min-height: 600px;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+body.about .modal .modal-dialog .modal-content .modal-body .row .text {
+  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  padding: 1.6rem 2.4rem 1.6rem 1.6rem;
+}
+
+body.about .modal .modal-dialog .modal-content .modal-body .row .details {
+  color: white;
+  text-align: center;
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(0, #197082), color-stop(1, #0A3D5F));
+  background-image: -o-linear-gradient(left, #197082 0%, #0A3D5F 100%);
+  background-image: -moz-linear-gradient(left, #197082 0%, #0A3D5F 100%);
+  background-image: -webkit-linear-gradient(left, #197082 0%, #0A3D5F 100%);
+  background-image: -ms-linear-gradient(left, #197082 0%, #0A3D5F 100%);
+  background-image: linear-gradient(to left, #197082 0%, #0A3D5F 100%);
+}
+
+body.about .modal .modal-dialog .modal-content .modal-body .row .details img {
+  border-radius: 111px;
+  margin-top: 5.6rem;
+}
+
+body.about .modal .modal-dialog .modal-content .modal-body .row .details #modalName {
+  font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-size: 2rem;
+  line-height: 2rem;
+  margin-top: 3.2rem;
+  margin-bottom: 1.2rem;
+}
+
+body.about .modal .modal-dialog .modal-content .modal-body .row .details #modalTitle {
+  font-family: "BrandonGrotesque-Reg", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  font-style: italic;
+  margin-bottom: 3.2rem;
+}
+
+body.about .modal .modal-dialog button.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  body.about .modal .modal-dialog button.close {
+    text-shadow: none;
+    opacity: 1;
+  }
+}
+
+body.about .modal .modal-dialog button.close span {
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  display: block;
+  border: 1px solid gray;
+  font-weight: 900;
+}
+
+@media (max-width: 768px) {
+  body.about .modal .modal-dialog button.close span {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+  }
 }
 
 body.type-projects.kind-section .row.jumbotron {

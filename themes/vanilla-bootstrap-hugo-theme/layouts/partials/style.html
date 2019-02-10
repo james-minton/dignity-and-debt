@@ -1,7 +1,10 @@
 <style>
-  /* testing */
+  html {
+    background-color: #fff !important;
+  }
   body {
     color: black;
+    background-color: #fff;
   }
 {{ $img := strings.TrimPrefix "/uploads/" .Page.Params.hero_image }}
 {{ with $.Site.GetPage "page" "uploads/_index.md" }}
@@ -41,7 +44,7 @@
     -webkit-box-shadow: 0 0 transparent, 0 0 transparent, 0 5px 5px -4px rgba(0, 0, 0, 0.10);
     -moz-box-shadow: 0 0 transparent, 0 0 transparent, 0 5px 5px -4px rgba(0, 0, 0, 0.10);
     box-shadow: 0 0 transparent, 0 0 transparent, 0 5px 5px -4px rgba(0, 0, 0, 0.10);
-    transition: background-color 200ms ease-in-out;
+    transition: background-color 150ms ease-in-out;
   }
   .not-home.scroll-top nav {
     box-shadow: none;

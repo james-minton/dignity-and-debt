@@ -76,7 +76,7 @@
 <div class="row about-staff flex-parent">
   {{ range .Site.Data.people }}
     {{ if eq .role "staff" }}
-    <div class="col col-3 col-sm-12 col-md-3 col-lg-3 flex-child">
+    <div class="col col-sm-12 col-md-3 col-lg-3 flex-child">
       <div class="pic">
         {{ $img := strings.TrimPrefix "/uploads/" .image }}
         {{ $name := .name }}
@@ -105,7 +105,7 @@
 <div class="row about-partners flex-parent">
   {{ range .Site.Data.people }}
     {{ if eq .role "partner" }}
-    <div class="col col-3 flex-child">
+    <div class="col col-sm-12 col-md-3 col-lg-3 flex-child">
       <div class="pic">
         {{ $img := strings.TrimPrefix "/uploads/" .image }}
         {{ $name := .name }}
@@ -127,23 +127,6 @@
   {{ end }}
 </div>
 
-<div class="modal fade" id="peopleBioModal" tabindex="-1" role="dialog" aria-labelledby="modalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
+{{ partial "modal" . }}
 
 {{ end }}

@@ -1024,8 +1024,18 @@ body.about {
     }
   } // end .row
 
+  .modal-backdrop {
+    background-color: $white;
+
+    &.show {
+      opacity: 0;
+    }
+  }
+
   .modal {
-    top: 25%;
+    top: 6.8rem;
+    background-color: #fff;
+
     &.fade .modal-dialog {
       -moz-transition: none !important;
       -o-transition: none !important;
@@ -1037,6 +1047,89 @@ body.about {
       -o-transform: none !important;
       -webkit-transform: none !important;
       transform: none !important;
+    }
+
+    .modal-dialog {
+      max-width: 838px;
+      .modal-content {
+        border-radius: 0;
+        border: none;
+        box-shadow: 6px 7px 13px 4px rgba(0, 0, 0, .1);
+
+        .modal-body {
+          padding: 0;
+
+          .row {
+            min-height: 600px;
+            margin-right: 0;
+            margin-left: 0;
+            .text {
+              font-family: $font-family-base;
+              font-size: 1.8rem;
+              line-height: 2.6rem;
+              padding: 1.6rem 2.4rem 1.6rem 1.6rem;
+            }
+            .details {
+              color: white;
+              text-align: center;
+              background-image: -webkit-gradient(
+              	linear,
+              	right top,
+              	left top,
+              	color-stop(0, #197082),
+              	color-stop(1, #0A3D5F)
+              );
+              background-image: -o-linear-gradient(left, #197082 0%, #0A3D5F 100%);
+              background-image: -moz-linear-gradient(left, #197082 0%, #0A3D5F 100%);
+              background-image: -webkit-linear-gradient(left, #197082 0%, #0A3D5F 100%);
+              background-image: -ms-linear-gradient(left, #197082 0%, #0A3D5F 100%);
+              background-image: linear-gradient(to left, #197082 0%, #0A3D5F 100%);
+
+              img {
+                border-radius: 111px;
+                margin-top: 5.6rem;
+              }
+              #modalName {
+                font-family: $brandongrotesque-bold;
+                font-size: 2rem;
+                line-height: 2rem;
+                margin-top: 3.2rem;
+                margin-bottom: 1.2rem;
+              }
+              #modalTitle {
+                font-family: $brandongrotesque-reg;
+                font-size: 1.8rem;
+                line-height: 1.8rem;
+                font-style: italic;
+                margin-bottom: 3.2rem;
+              }
+            }
+
+          }
+        }
+      }
+      button.close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
+        @media (max-width: 768px) {
+          text-shadow: none;
+          opacity: 1;
+        }
+        span {
+          border-radius: 10px;
+          width: 20px;
+          height: 20px;
+          display: block;
+          border: 1px solid gray;
+          font-weight: 900;
+          @media (max-width: 768px) {
+            border: 1px solid $white;
+            color: $white;
+          }
+        }
+      }
     }
   }
 }
