@@ -13482,31 +13482,24 @@ body.type-projects.kind-page .row.content h6 {
   margin-bottom: 4.6rem;
 }
 
-.kind-section.type-2018-program .row h2 {
+.kind-section.type-2018-program .row.heading h2 {
   font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
   font-size: 4rem;
   color: #003E62;
   text-align: center;
   width: 100%;
-  margin-bottom: 0;
+  margin: 5.6rem auto;
 }
 
-.kind-section.type-2018-program .row.subtitle {
-  margin-top: 5.6rem;
-  margin-bottom: 11.2rem;
-}
-
-.kind-section.type-2018-program .row.dig-roundtable {
-  margin-bottom: 7.2rem;
-}
-
-.kind-section.type-2018-program .row h3 {
+.kind-section.type-2018-program .row.heading h3 {
   font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
   font-size: 2.8rem;
   color: #003E62;
   text-align: center;
   text-transform: uppercase;
   line-height: 3.2rem;
+  width: 100%;
+  margin: 7.2rem auto 4.8rem;
 }
 
 .kind-section.type-2018-program .row.logistics {
@@ -13554,9 +13547,19 @@ body.type-projects.kind-page .row.content h6 {
 }
 
 .kind-section.type-2018-program .row.news-banner .column span {
-  font-family: "BrandonGrotesque-Reg", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
   font-size: 1.8rem;
-  line-height: 2.4rem;
+  line-height: 2.6rem;
+}
+
+.kind-section.type-2018-program .row.news-banner.center-h {
+  min-height: 3.2rem;
+}
+
+.kind-section.type-2018-program .row.news-banner.center-h h3 {
+  text-align: center;
+  margin-top: .75rem;
+  margin-bottom: 0;
 }
 
 .kind-section.type-2018-program .row.people {
@@ -13585,6 +13588,7 @@ body.type-projects.kind-page .row.content h6 {
   line-height: 2.4rem;
   color: #1C6F81;
   font-style: italic;
+  margin: .8rem auto;
 }
 
 .kind-section.type-2018-program .row.people .extra {
@@ -13592,6 +13596,10 @@ body.type-projects.kind-page .row.content h6 {
   font-size: 2.2rem;
   line-height: 2.6rem;
   color: #003E62;
+}
+
+.kind-section.type-2018-program .row.people:last-child {
+  margin-bottom: 10.2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
