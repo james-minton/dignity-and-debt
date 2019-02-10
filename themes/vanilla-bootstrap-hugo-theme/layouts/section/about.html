@@ -5,7 +5,7 @@
     {{ $img := strings.TrimPrefix "/uploads/" .Page.Params.image }}
     {{ with $.Site.GetPage "page" "uploads/_index.md" }}
         {{ with .Resources.GetMatch $img }}
-              {{$img102 := .Fill "1484x928 Center"}}
+              {{$img102 := .Fill "742x464 Center"}}
               <img class="flex-child" src="{{ $img102.RelPermalink }}" width="742" height="464" alt="About page banner image" tabindex="-1">
         {{ end }}
     {{ end }}
