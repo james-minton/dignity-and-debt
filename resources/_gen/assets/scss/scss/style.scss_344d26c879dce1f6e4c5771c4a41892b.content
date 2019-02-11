@@ -12623,6 +12623,7 @@ body.home .jumbotron div.h2 {
 
 body.home #main {
   background-color: #ffffff;
+  overflow-x: hidden;
 }
 
 body.home .col-intro {
@@ -13047,6 +13048,17 @@ h3.who-we-are,
   margin-bottom: 3.2rem;
 }
 
+body.about .row.about-hero {
+  max-width: 1280px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+body.about .row.about-hero img {
+  max-width: 100%;
+  height: 100%;
+}
+
 body.about .row.about-hero .col {
   padding-left: 0;
   padding-right: 0;
@@ -13084,6 +13096,12 @@ body.about .row.about-objective .number span {
   color: #1C6F81;
 }
 
+@media (max-width: 1399.98px) {
+  body.about .row.about-objective .number {
+    max-width: 2%;
+  }
+}
+
 body.about .row.about-objective .descr h3 {
   font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
   font-size: 2.8rem;
@@ -13103,23 +13121,39 @@ body.about .row.about-objective .figure {
   min-width: 180px;
 }
 
+@media (max-width: 1399.98px) {
+  body.about .row.about-objective .figure {
+    max-width: 18%;
+    margin-left: 3.2rem;
+  }
+}
+
 @media (max-width: 768px) {
   body.about .row.about-objective .figure {
     display: none;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
   body.about .row.about-obj-index-1 .number {
     order: 1;
     margin-left: 82%;
     width: 8%;
   }
-  body.about .row.about-obj-index-1 .figure {
+}
+
+@media (min-width: 768px) {
+  body.about .row.about-obj-index-1 .number {
     order: 3;
+    /* margin-left: 82%; */
+    width: 8%;
+    margin-left: 0;
+  }
+  body.about .row.about-obj-index-1 .figure {
+    order: 2;
   }
   body.about .row.about-obj-index-1 .descr {
-    order: 2;
+    order: 1;
     margin-left: 8.33333333%;
   }
 }
@@ -13139,7 +13173,7 @@ body.about .row.about-objective .figure {
 }
 
 body.about .row.about-people-head {
-  margin-bottom: 8.0rem;
+  margin-bottom: 5.2rem;
 }
 
 body.about .row.about-people-head h2 {
@@ -13175,7 +13209,7 @@ body.about .row.about-director .title {
   color: #1C6F81;
   font-style: italic;
   text-align: center;
-  margin-bottom: 1.6rem;
+  margin-bottom: 3.2rem;
   line-height: 100%;
 }
 
@@ -13192,6 +13226,10 @@ body.about .row.about-director .morelink-parent {
   text-align: center;
 }
 
+body.about .row.about-staff {
+  margin-bottom: 9.2rem;
+}
+
 body.about .row h3.about-staff,
 body.about .row h3.about-partners {
   font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
@@ -13199,7 +13237,7 @@ body.about .row h3.about-partners {
   color: #003E62;
   line-height: 100%;
   text-align: center;
-  margin-top: 8.8rem;
+  margin-top: 5.8rem;
   margin-bottom: 8.8rem;
   width: 100%;
 }
