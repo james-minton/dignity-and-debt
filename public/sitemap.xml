@@ -73,6 +73,11 @@
   </url>
   
   <url>
+    <loc>/meetings/_index.1/</loc>
+    <lastmod>2019-01-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/projects/</loc>
     <lastmod>2019-01-25T00:00:00+00:00</lastmod>
   </url>
@@ -119,6 +124,7 @@
   
   <url>
     <loc>/meetings/</loc>
+    <lastmod>2019-01-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>

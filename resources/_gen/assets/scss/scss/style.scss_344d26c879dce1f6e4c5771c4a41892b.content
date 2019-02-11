@@ -13117,7 +13117,8 @@ body.about .row.about-objective .number span {
 
 @media (min-width: 768px) {
   body.about .row.about-objective .number {
-    max-width: 2%;
+    max-width: 3%;
+    margin-right: 3.2rem;
   }
 }
 
@@ -13155,7 +13156,7 @@ body.about .row.about-objective .figure {
 @media (max-width: 1399.98px) {
   body.about .row.about-objective .figure {
     max-width: 18%;
-    margin-left: 3.2rem;
+    margin-left: 0;
   }
 }
 
@@ -13182,6 +13183,7 @@ body.about .row.about-objective .figure {
     /* margin-left: 82%; */
     width: 8%;
     margin-left: 0;
+    margin-right: 0;
   }
   body.about .row.about-obj-index-1 .figure {
     order: 2;
@@ -13266,7 +13268,7 @@ body.about .row.about-director .morelink-parent {
 }
 
 body.about .row.about-staff {
-  margin-bottom: 9.2rem;
+  margin-bottom: 11.6rem;
 }
 
 body.about .row h3.about-staff,
@@ -13532,6 +13534,24 @@ body.type-projects.kind-page .row.content h6 {
   line-height: 3.2rem;
   text-transform: uppercase;
   margin-top: 3.8rem;
+}
+
+body.type-meetings.kind-section .row.jumbotron {
+  height: 310px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 6.4rem;
+}
+
+.kind-section.type-meetings .row.news-banner.staytuned {
+  margin-top: -104px;
+}
+
+@media (min-width: 1024px) {
+  .kind-section.type-meetings .row.news-banner.staytuned span.center-span {
+    text-align: center;
+    display: block;
+  }
 }
 
 .kind-section.type-meetings .row.news-banner .column {

@@ -1,9 +1,19 @@
 {{ define "main" }}
 
+{{ $meetings_hero_img := strings.TrimPrefix "/uploads/" .Page.Params.hero_image }}
+{{ with $.Site.GetPage "page" "uploads/_index.md" }}
+{{ with .Resources.GetMatch $meetings_hero_img }}
+{{$meetings_hero := .Fill "2880x872 TopLeft"}}
+<div id="meetings-hero" class="jumbotron row" style="background-image: url('{{ $meetings_hero.RelPermalink }}');">
+</div>
+{{ end }}
+{{ end }}
+
+
 <div class="row news-banner staytuned">
   <div class="column col-lg-8 col-md-8 col-sm-10 offset-lg-2 offset-md-2 offset-sm-1">
-    <h3 tabindex="0">Stay Tuned</h3>
-    <span tabindex="0">We are in the process of planning new meetings. Be sure to come back and visit us soon for new videos and updates.</span>
+    <h3 tabindex="0">Inaugural Meeting: The Network Roundtable</h3>
+    <span class="center-span" tabindex="0">Carl A. Fields Center for Equality + Cultural Understanding<br>Princeton University • May 9 and 10, 2018</span>
   </div>
 </div>
 
