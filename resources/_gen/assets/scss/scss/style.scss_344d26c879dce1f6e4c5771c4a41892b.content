@@ -12425,7 +12425,7 @@ img.float-left {
 }
 
 #footer .container {
-  padding-left: 5.6rem;
+  max-width: 960px;
 }
 
 #footer h3 {
@@ -12439,10 +12439,20 @@ img.float-left {
   text-decoration: underline;
 }
 
+#footer .row.menu-row {
+  margin: 0;
+}
+
+#footer .col.menu-col {
+  padding: 0;
+}
+
 #footer ul {
   list-style: none;
   text-align: left;
   padding-left: 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 #footer ul li {
@@ -12471,7 +12481,7 @@ img.float-left {
 }
 
 #footer .social-and-copy {
-  margin-top: 5.6rem;
+  margin-top: 3.2rem;
   text-align: left;
   font-size: 1.2rem;
   padding-bottom: 6.4rem;
@@ -12504,7 +12514,11 @@ img.float-left {
 #footer .social-and-copy .siteby {
   font-size: 1.2rem;
   color: #ffffff;
-  align-self: flex-end;
+  align-self: flex-start;
+}
+
+#footer .social-and-copy .siteby {
+  text-align: right;
 }
 
 #footer .contact-and-menu {
@@ -13548,7 +13562,7 @@ body.type-meetings.kind-section .row.jumbotron {
 }
 
 @media (min-width: 1024px) {
-  .kind-section.type-meetings .row.news-banner.staytuned span.center-span {
+  .kind-section.type-meetings .row.news-banner.staytuned {
     text-align: center;
     display: block;
   }

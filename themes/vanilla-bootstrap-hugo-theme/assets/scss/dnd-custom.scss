@@ -176,7 +176,7 @@ img {
   background-color: #0A3D5F;
   font-family: $brandongrotesque-reg;
   .container {
-    padding-left: 5.6rem;
+    max-width: 960px;
   }
   h3 {
     text-align: left;
@@ -187,10 +187,19 @@ img {
       text-decoration: underline;
     }
   }
+  .row.menu-row {
+    margin: 0;
+  }
+  .col.menu-col {
+    padding: 0;
+  }
   ul {
     list-style: none;
     text-align: left;
     padding-left: 0;
+      display: flex;
+      justify-content: space-between;
+
     li {
       font-size: 1.6rem;
       a {
@@ -212,7 +221,7 @@ img {
     }
   }
   .social-and-copy {
-    margin-top: 5.6rem;
+    margin-top: 3.2rem;
     text-align: left;
     font-size: 1.2rem;
     padding-bottom: 6.4rem;
@@ -244,7 +253,10 @@ img {
     .siteby {
       font-size: 1.2rem;
       color: $white;
-      align-self: flex-end;
+      align-self: flex-start;
+    }
+    .siteby {
+      text-align: right;
     }
   }
   .contact-and-menu {
@@ -1324,11 +1336,12 @@ body.type-meetings.kind-section {
     &.news-banner {
       &.staytuned {
         margin-top: -104px;
+        @include media-breakpoint-up(mmd) {
+          text-align: center;
+          display: block;
+        }
         span.center-span {
-          @include media-breakpoint-up(mmd) {
-            text-align: center;
-            display: block;
-          }
+          
         }
       }
       .column {

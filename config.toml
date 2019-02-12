@@ -33,10 +33,10 @@ anchor = "smart"
     url = "/meetings/"
     weight = 3
 
-[[menu.main]]
-    name = "News"
-    url = "/news/"
-    weight = 4
+# [[menu.main]]
+#    name = "News"
+#    url = "/news/"
+#    weight = 4
 
 [permalinks]
   post = "/:year/:month/:day/:slug/"
