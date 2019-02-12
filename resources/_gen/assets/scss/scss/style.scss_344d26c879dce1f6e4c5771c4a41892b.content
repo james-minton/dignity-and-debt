@@ -12918,7 +12918,7 @@ h3.who-we-are,
   margin-right: 1.6rem;
   margin-bottom: 1.2rem;
   font-family: "BrandonGrotesque-Med", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
-  font-size: 1.8rem;
+  font-size: 2.1rem;
   line-height: 2.4rem;
   color: #0A3D5F;
   display: inline-block;
@@ -13016,6 +13016,7 @@ h3.who-we-are,
 .row.news-blocks .news-one-col a.link-news {
   margin: 3.2rem 0 0.8rem 0;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .row.news-blocks .news-one-col a.link-news:hover {

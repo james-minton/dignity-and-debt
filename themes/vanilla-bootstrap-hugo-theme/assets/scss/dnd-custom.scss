@@ -679,7 +679,7 @@ h3.who-we-are,
     margin-right: 1.6rem;
     margin-bottom: 1.2rem;
     font-family: $brandongrotesque-med;
-    font-size: 1.8rem;
+    font-size: 2.1rem;
     line-height: 2.4rem;
     color: $darkblue;
     display: inline-block;
@@ -763,6 +763,7 @@ h3.who-we-are,
     a.link-news {
       margin: 3.2rem 0 0.8rem 0;
       cursor: pointer;
+      text-decoration: none;
       &:hover {
         cursor: pointer;
       }
