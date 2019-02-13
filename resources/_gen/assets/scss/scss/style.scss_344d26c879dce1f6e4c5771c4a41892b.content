@@ -13647,7 +13647,7 @@ body.type-meetings.kind-section .row.jumbotron {
 }
 
 .kind-section.type-meetings .row.the-roundtable {
-  margin-top: 14.4rem;
+  margin-top: 9.4rem;
 }
 
 .kind-section.type-meetings .row.the-roundtable .img-parent {
