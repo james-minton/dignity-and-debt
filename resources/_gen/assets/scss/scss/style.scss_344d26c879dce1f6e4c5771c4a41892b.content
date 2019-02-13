@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400|Open+Sans:400,700");
+/* 'Open Sans', 'Helvetica Neue', Arial, sans-serif,
+  -apple-system; */
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -56,7 +58,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 body {
   margin: 0;
-  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "adobe-caslon-pro", "Crimson Text", serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.6;
@@ -5162,7 +5164,7 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "adobe-caslon-pro", "Crimson Text", serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -5275,7 +5277,7 @@ button.close {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "adobe-caslon-pro", "Crimson Text", serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -12806,7 +12808,7 @@ h3.who-we-are,
 }
 
 .row.news-banner .flex-parent .flex-child.text span {
-  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "adobe-caslon-pro", "Crimson Text", serif;
   font-size: 18px;
   color: #0A3D5F;
 }
@@ -13101,7 +13103,7 @@ body.about .row.about-descr .col h2 {
 }
 
 body.about .row.about-descr .col p {
-  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "adobe-caslon-pro", "Crimson Text", serif;
   line-height: 2.6rem;
   font-size: 1.8rem;
 }
@@ -13158,7 +13160,7 @@ body.about .row.about-objective .descr h3 {
 }
 
 body.about .row.about-objective .descr p {
-  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "adobe-caslon-pro", "Crimson Text", serif;
   font-size: 1.8rem;
   line-height: 2.6rem;
   color: #003E62;
@@ -13270,7 +13272,7 @@ body.about .row.about-director .title {
 }
 
 body.about .row.about-director .bio {
-  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "adobe-caslon-pro", "Crimson Text", serif;
   font-size: 1.8rem;
   color: #003E62;
   line-height: 2.6rem;
@@ -13333,7 +13335,7 @@ body.about .row.about-partners .title, body.about .row.about-staff .title {
 }
 
 body.about .row.about-partners .bio, body.about .row.about-staff .bio {
-  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "adobe-caslon-pro", "Crimson Text", serif;
   font-size: 1.8rem;
   color: #003E62;
   line-height: 2.6rem;
@@ -13397,7 +13399,7 @@ body.about .modal .modal-dialog .modal-content .modal-body .row {
 }
 
 body.about .modal .modal-dialog .modal-content .modal-body .row .text {
-  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "adobe-caslon-pro", "Crimson Text", serif;
   font-size: 1.8rem;
   line-height: 2.6rem;
   padding: 1.6rem 2.4rem 1.6rem 1.6rem;
@@ -13489,7 +13491,7 @@ body.type-projects.kind-section .row h2:after {
 }
 
 body.type-projects.kind-section .row .desc {
-  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "adobe-caslon-pro", "Crimson Text", serif;
   font-size: 1.8rem;
   color: #003E62;
   line-height: 2.6rem;
@@ -13545,7 +13547,7 @@ body.type-projects.kind-page .row h2 {
 }
 
 body.type-projects.kind-page .row.content {
-  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "adobe-caslon-pro", "Crimson Text", serif;
   font-size: 1.8rem;
   line-height: 2.6rem;
   margin-bottom: 5.6rem;
@@ -13616,7 +13618,7 @@ body.type-meetings.kind-section .row.jumbotron {
 }
 
 .news-banner .column span {
-  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "adobe-caslon-pro", "Crimson Text", serif;
   font-size: 1.8rem;
   line-height: 2.4rem;
 }
@@ -13628,7 +13630,7 @@ body.type-meetings.kind-section .row.jumbotron {
 }
 
 .kind-section.type-meetings .row.whydignity .column span {
-  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "adobe-caslon-pro", "Crimson Text", serif;
   font-size: 1.8rem;
   line-height: 2.6rem;
 }
@@ -13670,7 +13672,7 @@ body.type-meetings.kind-section .row.jumbotron {
 }
 
 .kind-section.type-meetings .row.the-roundtable .text span {
-  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "adobe-caslon-pro", "Crimson Text", serif;
   font-size: 1.8rem;
   line-height: 2.6rem;
   color: #003E62;
@@ -13685,7 +13687,7 @@ body.type-meetings.kind-section .row.jumbotron {
 }
 
 .kind-section.type-meetings .row.about-roundtable .column span {
-  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "adobe-caslon-pro", "Crimson Text", serif;
   font-size: 1.8rem;
   line-height: 2.6rem;
   color: #003E62;
@@ -13786,7 +13788,7 @@ body.type-meetings.kind-section .row.jumbotron {
 }
 
 .kind-section.type-2018-program .row.news-banner .column span {
-  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "adobe-caslon-pro", "Crimson Text", serif;
   font-size: 1.8rem;
   line-height: 2.6rem;
 }

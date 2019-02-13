@@ -51,8 +51,8 @@ $brandongrotesque-reg: 'BrandonGrotesque-Reg', 'Lato', 'Helvetica Neue', Arial, 
 
 // Fonts
 // TODO: Adjust once you have Adobe Caslon Pro
-$font-family-base: 'Crimson Text', 'Adobe Caslon Pro', 'Open Sans', 'Helvetica Neue', Arial, sans-serif,
-  -apple-system;
+$font-family-base: 'adobe-caslon-pro', 'Crimson Text', serif; /* 'Open Sans', 'Helvetica Neue', Arial, sans-serif,
+  -apple-system; */
 $font-family-heading: 'BrandonGrotesque-Med', 'Lato', 'Helvetica Neue', Arial, sans-serif, -apple-system;
 $font-family-sans-serif:     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $font-size-base: 1rem; // Assumes the browser default, typically `16px`
