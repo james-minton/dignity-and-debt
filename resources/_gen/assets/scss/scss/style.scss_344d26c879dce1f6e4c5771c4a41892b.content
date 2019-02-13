@@ -13081,14 +13081,25 @@ body.about .row.about-hero .col {
   padding-right: 0;
 }
 
-body.about .row.about-descr {
-  margin-bottom: 14rem;
+body.about .row.jumbotron {
+  height: 310px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 6.4rem;
+  background-position-x: center;
 }
 
-@media (min-width: 768px) {
-  body.about .row.about-descr {
-    margin-top: -100px;
+@media (max-width: 767.98px) {
+  body.about .row.jumbotron {
+    height: 210px;
   }
+}
+
+body.about .row.about-descr {
+  /* @include media-breakpoint-up(md) { */
+  margin-top: -100px;
+  /* } */
+  margin-bottom: 14rem;
 }
 
 body.about .row.about-descr .col {

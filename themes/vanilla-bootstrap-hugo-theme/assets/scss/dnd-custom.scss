@@ -811,6 +811,8 @@ h3.who-we-are,
 ////// About
 body.about {
 
+    
+  
   .row {
     &.about-hero {
       max-width: 1280px;
@@ -826,10 +828,21 @@ body.about {
       }
     }
 
-    &.about-descr {
-      @include media-breakpoint-up(md) { 
-        margin-top: -100px;
+    &.jumbotron {
+      height: 310px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-bottom: 6.4rem;
+      background-position-x: center;
+      @include media-breakpoint-down(sm) {
+        height: 210px;
       }
+    }
+
+    &.about-descr {
+      /* @include media-breakpoint-up(md) { */
+        margin-top: -100px;
+     /* } */
       margin-bottom: 14rem;
       .col {
         background-color: $aqua;
