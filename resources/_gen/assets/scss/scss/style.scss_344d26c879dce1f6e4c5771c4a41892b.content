@@ -12623,6 +12623,7 @@ body.home .jumbotron div.h2 {
 
 body.home #main {
   background-color: #ffffff;
+  overflow-x: hidden;
 }
 
 body.home .col-intro {
