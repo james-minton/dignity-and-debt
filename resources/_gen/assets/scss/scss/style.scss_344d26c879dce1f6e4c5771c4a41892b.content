@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400|Open+Sans:400,700");
+/* 'Open Sans', 'Helvetica Neue', Arial, sans-serif,
+  -apple-system; */
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -56,7 +58,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 body {
   margin: 0;
-  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "adobe-caslon-pro", "Crimson Text", serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.6;
@@ -5162,7 +5164,7 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "adobe-caslon-pro", "Crimson Text", serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -5275,7 +5277,7 @@ button.close {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "adobe-caslon-pro", "Crimson Text", serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -12425,7 +12427,7 @@ img.float-left {
 }
 
 #footer .container {
-  padding-left: 5.6rem;
+  max-width: 960px;
 }
 
 #footer h3 {
@@ -12439,10 +12441,20 @@ img.float-left {
   text-decoration: underline;
 }
 
+#footer .row.menu-row {
+  margin: 0;
+}
+
+#footer .col.menu-col {
+  padding: 0;
+}
+
 #footer ul {
   list-style: none;
   text-align: left;
   padding-left: 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 #footer ul li {
@@ -12471,7 +12483,7 @@ img.float-left {
 }
 
 #footer .social-and-copy {
-  margin-top: 5.6rem;
+  margin-top: 3.2rem;
   text-align: left;
   font-size: 1.2rem;
   padding-bottom: 6.4rem;
@@ -12504,7 +12516,11 @@ img.float-left {
 #footer .social-and-copy .siteby {
   font-size: 1.2rem;
   color: #ffffff;
-  align-self: flex-end;
+  align-self: flex-start;
+}
+
+#footer .social-and-copy .siteby {
+  text-align: right;
 }
 
 #footer .contact-and-menu {
@@ -12792,7 +12808,7 @@ h3.who-we-are,
 }
 
 .row.news-banner .flex-parent .flex-child.text span {
-  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "adobe-caslon-pro", "Crimson Text", serif;
   font-size: 18px;
   color: #0A3D5F;
 }
@@ -12904,7 +12920,7 @@ h3.who-we-are,
   margin-right: 1.6rem;
   margin-bottom: 1.2rem;
   font-family: "BrandonGrotesque-Med", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
-  font-size: 1.8rem;
+  font-size: 2.1rem;
   line-height: 2.4rem;
   color: #0A3D5F;
   display: inline-block;
@@ -13002,6 +13018,7 @@ h3.who-we-are,
 .row.news-blocks .news-one-col a.link-news {
   margin: 3.2rem 0 0.8rem 0;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .row.news-blocks .news-one-col a.link-news:hover {
@@ -13048,13 +13065,40 @@ h3.who-we-are,
   margin-bottom: 3.2rem;
 }
 
+body.about .row.about-hero {
+  max-width: 1280px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+body.about .row.about-hero img {
+  max-width: 100%;
+  height: 100%;
+}
+
 body.about .row.about-hero .col {
   padding-left: 0;
   padding-right: 0;
 }
 
+body.about .row.jumbotron {
+  height: 310px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 6.4rem;
+  background-position-x: center;
+}
+
+@media (max-width: 767.98px) {
+  body.about .row.jumbotron {
+    height: 210px;
+  }
+}
+
 body.about .row.about-descr {
+  /* @include media-breakpoint-up(md) { */
   margin-top: -100px;
+  /* } */
   margin-bottom: 14rem;
 }
 
@@ -13070,19 +13114,52 @@ body.about .row.about-descr .col h2 {
 }
 
 body.about .row.about-descr .col p {
-  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "adobe-caslon-pro", "Crimson Text", serif;
   line-height: 2.6rem;
   font-size: 1.8rem;
 }
 
 body.about .row.about-objective {
   margin-bottom: 11.6rem;
+  display: inline-block;
+}
+
+@media (max-width: 1023.98px) {
+  body.about .row.about-objective {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  body.about .row.about-objective {
+    display: flex;
+  }
 }
 
 body.about .row.about-objective .number span {
   font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
   font-size: 7rem;
   color: #1C6F81;
+}
+
+@media (min-width: 768px) {
+  body.about .row.about-objective .number {
+    max-width: 3%;
+    margin-right: 3.2rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  body.about .row.about-objective .number {
+    width: 35%;
+    max-width: 46%;
+    /* width: 300px; */
+    display: inline-block;
+    padding: 0;
+    text-align: right;
+    margin: 0;
+  }
 }
 
 body.about .row.about-objective .descr h3 {
@@ -13094,7 +13171,7 @@ body.about .row.about-objective .descr h3 {
 }
 
 body.about .row.about-objective .descr p {
-  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "adobe-caslon-pro", "Crimson Text", serif;
   font-size: 1.8rem;
   line-height: 2.6rem;
   color: #003E62;
@@ -13104,23 +13181,48 @@ body.about .row.about-objective .figure {
   min-width: 180px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1399.98px) {
   body.about .row.about-objective .figure {
-    display: none;
+    max-width: 18%;
+    margin-left: 0;
   }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 767.98px) {
+  body.about .row.about-objective .figure {
+    max-width: 45%;
+    margin-left: 0;
+    width: 50%;
+    display: inline-block;
+  }
+}
+
+@media (min-width: 1280px) {
   body.about .row.about-obj-index-1 .number {
     order: 1;
     margin-left: 82%;
     width: 8%;
   }
-  body.about .row.about-obj-index-1 .figure {
+}
+
+@media (min-width: 768px) {
+  body.about .row.about-obj-index-1 .number {
     order: 3;
+    /* margin-left: 82%; */
+    width: 8%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  body.about .row.about-obj-index-1 .figure {
+    order: 2;
   }
   body.about .row.about-obj-index-1 .descr {
-    order: 2;
+    order: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  body.about .row.about-obj-index-1 .descr {
     margin-left: 8.33333333%;
   }
 }
@@ -13140,7 +13242,7 @@ body.about .row.about-objective .figure {
 }
 
 body.about .row.about-people-head {
-  margin-bottom: 8.0rem;
+  margin-bottom: 5.2rem;
 }
 
 body.about .row.about-people-head h2 {
@@ -13176,12 +13278,12 @@ body.about .row.about-director .title {
   color: #1C6F81;
   font-style: italic;
   text-align: center;
-  margin-bottom: 1.6rem;
+  margin-bottom: 3.2rem;
   line-height: 100%;
 }
 
 body.about .row.about-director .bio {
-  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "adobe-caslon-pro", "Crimson Text", serif;
   font-size: 1.8rem;
   color: #003E62;
   line-height: 2.6rem;
@@ -13193,6 +13295,10 @@ body.about .row.about-director .morelink-parent {
   text-align: center;
 }
 
+body.about .row.about-staff {
+  margin-bottom: 11.6rem;
+}
+
 body.about .row h3.about-staff,
 body.about .row h3.about-partners {
   font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
@@ -13200,7 +13306,7 @@ body.about .row h3.about-partners {
   color: #003E62;
   line-height: 100%;
   text-align: center;
-  margin-top: 8.8rem;
+  margin-top: 5.8rem;
   margin-bottom: 8.8rem;
   width: 100%;
 }
@@ -13240,7 +13346,7 @@ body.about .row.about-partners .title, body.about .row.about-staff .title {
 }
 
 body.about .row.about-partners .bio, body.about .row.about-staff .bio {
-  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "adobe-caslon-pro", "Crimson Text", serif;
   font-size: 1.8rem;
   color: #003E62;
   line-height: 2.6rem;
@@ -13304,7 +13410,7 @@ body.about .modal .modal-dialog .modal-content .modal-body .row {
 }
 
 body.about .modal .modal-dialog .modal-content .modal-body .row .text {
-  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "adobe-caslon-pro", "Crimson Text", serif;
   font-size: 1.8rem;
   line-height: 2.6rem;
   padding: 1.6rem 2.4rem 1.6rem 1.6rem;
@@ -13376,6 +13482,7 @@ body.type-projects.kind-section .row.jumbotron {
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 6.4rem;
+  background-position-y: bottom;
 }
 
 body.type-projects.kind-section .row h2 {
@@ -13395,15 +13502,18 @@ body.type-projects.kind-section .row h2:after {
 }
 
 body.type-projects.kind-section .row .desc {
-  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "adobe-caslon-pro", "Crimson Text", serif;
   font-size: 1.8rem;
   color: #003E62;
   line-height: 2.6rem;
 }
 
 body.type-projects.kind-section .row .morelink-parent {
-  margin-top: 4.2rem;
   margin-bottom: 5.6rem;
+}
+
+body.type-projects.kind-section .row .morelink-parent a {
+  margin-top: 4.2rem;
 }
 
 body.type-projects.kind-section .row .morelink-parent:after {
@@ -13421,18 +13531,34 @@ body.type-projects.kind-page .row.jumbotron {
   margin-bottom: 3.8rem;
 }
 
+body.type-projects.kind-page .row.jumbotron_fw {
+  display: block;
+  margin-bottom: 3.8rem;
+}
+
+body.type-projects.kind-page .row.jumbotron_fw img {
+  max-width: 100%;
+  height: auto;
+}
+
+body.type-projects.kind-page .row img.content_well {
+  max-width: 90%;
+  margin: 3.2rem auto;
+  display: block;
+}
+
 body.type-projects.kind-page .row h2 {
   font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
   font-size: 3.2rem;
   color: #003E62;
   line-height: 4rem;
   text-transform: uppercase;
-  margin-top: 8rem;
-  margin-bottom: 4.8rem;
+  margin-top: 3.2rem;
+  margin-bottom: 3.2rem;
 }
 
 body.type-projects.kind-page .row.content {
-  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "adobe-caslon-pro", "Crimson Text", serif;
   font-size: 1.8rem;
   line-height: 2.6rem;
   margin-bottom: 5.6rem;
@@ -13458,7 +13584,34 @@ body.type-projects.kind-page .row.content h6 {
   margin-top: 3.8rem;
 }
 
-.kind-section.type-meetings .row.news-banner .column {
+body.type-meetings.kind-section .row.jumbotron {
+  height: 310px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 6.4rem;
+}
+
+.news-banner.staytuned {
+  margin-top: -104px;
+}
+
+@media (min-width: 1024px) {
+  .news-banner.staytuned {
+    text-align: center;
+    display: block;
+  }
+}
+
+.news-banner.projectstitle {
+  margin-top: -104px;
+  margin-bottom: 7.2rem;
+  /* @include media-breakpoint-up(mmd) {
+      text-align: center;
+      display: block;
+    } */
+}
+
+.news-banner .column {
   background-color: #C9E9EA;
   justify-content: flex-start;
   padding: 4rem;
@@ -13467,15 +13620,16 @@ body.type-projects.kind-page .row.content h6 {
   color: #003E62;
 }
 
-.kind-section.type-meetings .row.news-banner .column h3 {
+.news-banner .column h3 {
   font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
-  font-size: 2.8rem;
+  font-size: 4rem;
   text-transform: uppercase;
   color: #003E62;
+  margin-bottom: 0.8rem;
 }
 
-.kind-section.type-meetings .row.news-banner .column span {
-  font-family: "BrandonGrotesque-Reg", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
+.news-banner .column span {
+  font-family: "adobe-caslon-pro", "Crimson Text", serif;
   font-size: 1.8rem;
   line-height: 2.4rem;
 }
@@ -13487,13 +13641,13 @@ body.type-projects.kind-page .row.content h6 {
 }
 
 .kind-section.type-meetings .row.whydignity .column span {
-  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "adobe-caslon-pro", "Crimson Text", serif;
   font-size: 1.8rem;
   line-height: 2.6rem;
 }
 
 .kind-section.type-meetings .row.the-roundtable {
-  margin-top: 14.4rem;
+  margin-top: 9.4rem;
 }
 
 .kind-section.type-meetings .row.the-roundtable .img-parent {
@@ -13529,7 +13683,7 @@ body.type-projects.kind-page .row.content h6 {
 }
 
 .kind-section.type-meetings .row.the-roundtable .text span {
-  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "adobe-caslon-pro", "Crimson Text", serif;
   font-size: 1.8rem;
   line-height: 2.6rem;
   color: #003E62;
@@ -13544,7 +13698,7 @@ body.type-projects.kind-page .row.content h6 {
 }
 
 .kind-section.type-meetings .row.about-roundtable .column span {
-  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "adobe-caslon-pro", "Crimson Text", serif;
   font-size: 1.8rem;
   line-height: 2.6rem;
   color: #003E62;
@@ -13645,7 +13799,7 @@ body.type-projects.kind-page .row.content h6 {
 }
 
 .kind-section.type-2018-program .row.news-banner .column span {
-  font-family: "Crimson Text", "Adobe Caslon Pro", "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  font-family: "adobe-caslon-pro", "Crimson Text", serif;
   font-size: 1.8rem;
   line-height: 2.6rem;
 }

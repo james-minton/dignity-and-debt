@@ -176,7 +176,7 @@ img {
   background-color: #0A3D5F;
   font-family: $brandongrotesque-reg;
   .container {
-    padding-left: 5.6rem;
+    max-width: 960px;
   }
   h3 {
     text-align: left;
@@ -187,10 +187,19 @@ img {
       text-decoration: underline;
     }
   }
+  .row.menu-row {
+    margin: 0;
+  }
+  .col.menu-col {
+    padding: 0;
+  }
   ul {
     list-style: none;
     text-align: left;
     padding-left: 0;
+      display: flex;
+      justify-content: space-between;
+
     li {
       font-size: 1.6rem;
       a {
@@ -212,7 +221,7 @@ img {
     }
   }
   .social-and-copy {
-    margin-top: 5.6rem;
+    margin-top: 3.2rem;
     text-align: left;
     font-size: 1.2rem;
     padding-bottom: 6.4rem;
@@ -244,7 +253,10 @@ img {
     .siteby {
       font-size: 1.2rem;
       color: $white;
-      align-self: flex-end;
+      align-self: flex-start;
+    }
+    .siteby {
+      text-align: right;
     }
   }
   .contact-and-menu {
@@ -667,7 +679,7 @@ h3.who-we-are,
     margin-right: 1.6rem;
     margin-bottom: 1.2rem;
     font-family: $brandongrotesque-med;
-    font-size: 1.8rem;
+    font-size: 2.1rem;
     line-height: 2.4rem;
     color: $darkblue;
     display: inline-block;
@@ -751,6 +763,7 @@ h3.who-we-are,
     a.link-news {
       margin: 3.2rem 0 0.8rem 0;
       cursor: pointer;
+      text-decoration: none;
       &:hover {
         cursor: pointer;
       }
@@ -798,16 +811,38 @@ h3.who-we-are,
 ////// About
 body.about {
 
+    
+  
   .row {
     &.about-hero {
+      max-width: 1280px;
+      display: flex;
+      justify-content: flex-end;
+      img {
+        max-width: 100%;
+        height:100%;
+      }
       .col {
         padding-left: 0;
         padding-right: 0;
       }
     }
 
+    &.jumbotron {
+      height: 310px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-bottom: 6.4rem;
+      background-position-x: center;
+      @include media-breakpoint-down(sm) {
+        height: 210px;
+      }
+    }
+
     &.about-descr {
-      margin-top: -100px;
+      /* @include media-breakpoint-up(md) { */
+        margin-top: -100px;
+     /* } */
       margin-bottom: 14rem;
       .col {
         background-color: $aqua;
@@ -831,11 +866,33 @@ body.about {
 
     &.about-objective {
       margin-bottom: 11.6rem;
+      display: inline-block;
+      @include media-breakpoint-down(md) {
+        padding-left: 4rem;
+        padding-right: 4rem;
+      }
+      @include media-breakpoint-up (md) {
+        display: flex;
+      }
       .number {
         span {
           font-family: $brandongrotesque-bold;
           font-size: 7rem;
           color: $aqualink;
+        }
+      
+        @include media-breakpoint-up(md) {
+          max-width: 3%;
+          margin-right: 3.2rem;
+        }
+        @include media-breakpoint-down(sm) {
+          width: 35%;
+          max-width: 46%;
+          /* width: 300px; */
+          display: inline-block;
+          padding: 0;
+          text-align: right;
+          margin: 0;
         }
       }
 
@@ -858,11 +915,30 @@ body.about {
 
       .figure {
         min-width: 180px;
+        @include media-breakpoint-down(lg) {
+        max-width: 18%;
+        margin-left: 0;
+        }
+        @include media-breakpoint-down(sm) {
+          max-width: 45%;
+          margin-left: 0;
+          width: 50%;
+          display: inline-block;
+        }
       }
 
       @media (max-width: 768px) {
         .figure {
-          display: none;
+          
+        }
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      &.about-obj-index-1 {
+        .number {
+          order: 1;
+          margin-left: 82%; 
+          width: 8%;
         }
       }
     }
@@ -870,22 +946,30 @@ body.about {
     @include media-breakpoint-up(md) {
       &.about-obj-index-1 {
         .number {
-          order: 1;
-          margin-left: 82%;
+          order: 3;
+          /* margin-left: 82%; */
           width: 8%;
+          margin-left: 0;
+          margin-right: 0;
         }
 
         .figure {
-          order: 3;
+          order: 2;
         }
 
         .descr {
-          order: 2;
+          order: 1;
+          
+        }
+      }
+    }
+    @include media-breakpoint-up(mmd) {
+      &.about-obj-index-1 {
+        .descr {
           margin-left: 8.33333333%;
         }
       }
     }
-
     @include media-breakpoint-up(lg) {
       &.about-obj-index-1 {
         .number {
@@ -907,7 +991,7 @@ body.about {
 
 
     &.about-people-head {
-      margin-bottom: 8.0rem;
+      margin-bottom: 5.2rem;
       h2 {
         font-family: $brandongrotesque-bold;
         font-size: 4rem;
@@ -941,7 +1025,7 @@ body.about {
         color: $dnd-darkgreen;
         font-style: italic;
         text-align: center;
-        margin-bottom: 1.6rem;
+        margin-bottom: 3.2rem;
         line-height: 100%;
       }
       .bio {
@@ -956,7 +1040,9 @@ body.about {
         text-align: center;
       }
     }
-
+    &.about-staff {
+      margin-bottom: 11.6rem;
+    }
     h3.about-staff,
     h3.about-partners {
       font-family: $brandongrotesque-bold;
@@ -964,7 +1050,7 @@ body.about {
       color: $dnd-navy;
       line-height: 100%;
       text-align: center;
-      margin-top: 8.8rem;
+      margin-top: 5.8rem;
       margin-bottom: 8.8rem;
       width: 100%;
     }
@@ -1144,6 +1230,7 @@ body.type-projects.kind-section {
       background-repeat: no-repeat;
       background-size: cover;
       margin-bottom: 6.4rem;
+      background-position-y: bottom;
     }
 
     h2,
@@ -1175,8 +1262,10 @@ body.type-projects.kind-section {
     }
 
     .morelink-parent {
-      margin-top: 4.2rem;
       margin-bottom: 5.6rem;
+      a {
+        margin-top: 4.2rem;
+      }
 
       &:after {
         content: "";
@@ -1198,6 +1287,19 @@ body.type-projects {
         background-size: cover;
         margin-bottom: 3.8rem;
       }
+      &.jumbotron_fw {
+        display: block;
+        margin-bottom: 3.8rem;
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+      img.content_well {
+        max-width: 90%;
+        margin: 3.2rem auto;
+        display: block;
+      }
       h2 {
         font-family: $brandongrotesque-bold;
         font-size: 3.2rem;
@@ -1205,8 +1307,8 @@ body.type-projects {
         line-height: 4rem;
         text-transform: uppercase;
         // margin-left: 20rem;
-        margin-top: 8rem;
-        margin-bottom: 4.8rem;
+        margin-top: 3.2rem;
+        margin-bottom: 3.2rem;
       }
       &.content {
         font-family: $font-family-base;
@@ -1241,6 +1343,57 @@ body.type-projects {
 
 ////// Meetings
 // Meetings Section
+
+body.type-meetings.kind-section {
+  .row {
+    &.jumbotron {
+      height: 310px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-bottom: 6.4rem;
+    }
+  }
+} 
+
+.news-banner {
+  &.staytuned {
+    margin-top: -104px;
+    @include media-breakpoint-up(mmd) {
+      text-align: center;
+      display: block;
+    }
+  }
+  &.projectstitle {
+    margin-top: -104px;
+    margin-bottom: 7.2rem;
+    /* @include media-breakpoint-up(mmd) {
+      text-align: center;
+      display: block;
+    } */
+  }
+  .column {
+    background-color: $aqua;
+    justify-content: flex-start;
+    padding: 4rem;
+    margin-right: auto;
+    margin-left: auto;
+    color: $dnd-navy;
+
+    h3 {
+      font-family: $brandongrotesque-bold;
+      font-size: 4rem;
+      text-transform: uppercase;
+      color: $dnd-navy;
+      margin-bottom: 0.8rem;
+    }
+    span {
+      font-family: $font-family-base;
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+    }
+  }
+}
+
 .kind-section.type-meetings {
   .row {
 
@@ -1250,28 +1403,7 @@ body.type-projects {
     //   padding: 4.0rem;
     // }
 
-    &.news-banner {
-      .column {
-        background-color: $aqua;
-        justify-content: flex-start;
-        padding: 4rem;
-        margin-right: auto;
-        margin-left: auto;
-        color: $dnd-navy;
-
-        h3 {
-          font-family: $brandongrotesque-bold;
-          font-size: 2.8rem;
-          text-transform: uppercase;
-          color: $dnd-navy;
-        }
-        span {
-          font-family: $brandongrotesque-reg;
-          font-size: 1.8rem;
-          line-height: 2.4rem;
-        }
-      }
-    }
+    
 
     &.whydignity {
       .column {
@@ -1289,7 +1421,7 @@ body.type-projects {
     }
 
     &.the-roundtable {
-      margin-top: 14.4rem;
+      margin-top: 9.4rem;
       .img-parent {
         min-width: 212px;
         @media (max-width: 996px) {
