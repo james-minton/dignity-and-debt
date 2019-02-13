@@ -5,7 +5,7 @@ subtitle: ""
 type: "projects"
 date: "2019-01-25"
 hero_image:
-hero_image_fw: "/uploads/sibel_robai_january-february_2016.png"
+hero_image_fw: "/uploads/international_finance.jpg"
 link_out: "true"
 description: >-
     The visualization initiative will explore how people see, sense, and depict debt. We will digitize the mental images people construct on paper, in art, in song, in interviews, in testimony, in complaint, and through in vivo as well as virtual observations. This project will allow researchers and practitioners to ask how people experience, interpret, and embody different forms of debt. Why do some debts hurt more than others, even when they are mathematically equivalent? And what might be dignity enhancing versus degrading in the experience of debt that is seen, understood, and deeply felt? 
@@ -17,6 +17,8 @@ For example, Dr. Sibel Kusimba at American University is one of our Network memb
 <img class="content_well" src="/uploads/sibel-drawings.jpg" />
 
 Collaborating with the <a href="http://vizelab.princeton.edu/" target="_blank">VizE Lab for Ethnographic Data Visualization</a> in the Department of Anthropology, we will also produce data visualizations to help reveal patterns in big data collections of consumer complaints, or maps of how value circulates in a number of forms. 
+
+<img class="content_well" src="/uploads/sibel_robai_january-february_2016.png" />
 
 As part of its visualization initiative, the Dignity and Debt Network will host meetings of two working groups on measuring and visualizing dignity, respect, and social belonging in the use of financial services. The visualization project should help researchers redesign national level financial inclusion surveys and should offer alternative scales of inclusion that highlight the importance of interpersonal relationships and shared understandings of what a good life means, as well as how financial services facilitate or impede it. (October 2018 to May 2022.)
 
