@@ -8,7 +8,7 @@ media_folder: "content/uploads" # Media files will be stored in the repo under c
 public_folder: "/uploads" # The src attribute for uploaded media will begin with this
 
 collections:
-  - label: "Index Pages"
+  - label: "Index Pages and Social Metadata"
     name: "pages"
     files:
       - label: "Home Page"
@@ -46,76 +46,216 @@ collections:
         name: "about"
         file: "content/about/_index.html"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
-          - label: Locations
-            name: locations
-            widget: list
-            fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Address, name: address, widget: string}
-
-  - name: "posts" # Used in routes, e.g., /admin/collections/blog
-    label: "Post" # Used in the UI
-    folder: "content/post" # The path to the folder where the documents are stored
+          - {label: Display Title, name: display_title, widget: string}
+          - {label: Intro, name: intro, widget: text}
+          - label: "Body"
+            name: "body"
+            widget: "markdown"
+            buttons: ["bold", "italic", "code", "link", "quote", "code-block", "bulleted-list", "numbered-list"]
+          - label: "Image"
+            name: "image"
+            widget: "image"
+            default: "/uploads/wherry-group-2-1484w.jpg"
+            media_library:
+              config:
+                multiple: false
+          - label: "Hero Image"
+            name: "hero_image"
+            widget: "image"
+            default: "/uploads/close_up_2_men.jpg"
+            media_library:
+              config:
+                multiple: false
+          - label: "Director Bio Image"
+            name: "bio_image"
+            widget: "image"
+            default: "/uploads/ffwherry_bio.jpg"
+            media_library:
+              config:
+                multiple: false
+          - label: "Body"
+            name: "body"
+            widget: "markdown"
+            buttons: ["bold", "italic", "code", "link", "quote", "code-block", "bulleted-list", "numbered-list"]
+      - label: "Projects Page"
+        name: "projects"
+        file: "content/projects/_index.html"
+        fields:
+          - label: "Hero Image"
+            name: "hero_image"
+            widget: "image"
+            default: "/uploads/projects-streetscene.jpg"
+            media_library:
+              config:
+                multiple: false
+      - label: "Social Media Metadata"
+        name: "social"
+        file: "content/data/social.yaml"
+        fields:
+          - {label: Social Description, name: social_description, widget: text}
+          - label: "Social Image"
+            name: "social_image"
+            widget: "image"
+            default: "/uploads/wherry-seminar-table.jpg"
+            media_library:
+              config:
+                multiple: false
+          - {label: Facebook Link, name: facebook_link, widget: string}
+          - {label: Twitter Link, name: twitter_via, widget: string}
+          - {label: LinkedIn Link, name: linkedin_link, widget: string}
+          - {label: Instagram Link, name: instagram_link, widget: string}
+  - label: "People"
+    name: "people"
+    folder: "data/people"
+    create: true
+    identifier_field: name
+    slug: "person-{{slug}}.yaml"
+    fields:
+      - {label: Name, name: name, widget: string}
+      - {label: title, name: title, widget: string}
+      - {label: blurb, name: blurb, widget: text}
+      - label: "Role"
+        name: "role"
+        widget: "select"
+        options: ["director", "staff", "partner"]
+      - label: "Social Image"
+        name: "social_image"
+        widget: "image"
+        default: ""
+        media_library:
+          config:
+            multiple: false
+  - label: "About Page Objectives"
+    name: "objectives"
+    folder: "data/objectives"
+    create: false
+    identifier_field: name
+    fields:
+      - label: "Index (zero-based display order)"
+        name: "index"
+        widget: "number"
+        default: 0
+        valueType: "int"
+        min: 0
+        max: 2
+        step: 1
+      - label: "Display Number"
+        name: "display_number"
+        widget: "number"
+        default: 1
+        valueType: "int"
+        min: 1
+        max: 3
+        step: 1
+      - {label: Title, name: title, widget: string}
+      - label: "Icon"
+        name: "image"
+        widget: "image"
+        default: "/uploads/Research_Illustration.png"
+        media_library:
+          config:
+            multiple: false
+      - {label: blurb, name: blurb, widget: text}
+  - label: "Project Items"
+    name: "projects" # Used in routes, e.g., /admin/collections/blog
+    folder: "content/projects" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-
     fields: # The fields for each document, usually in front matter
-
       - label: "Title"
         name: "title"
         widget: "string"
+
+      - label: "Description"
+        name: "description"
+        widget: "text"
+
+      - label: "Weight (lowest displayed first)"
+        name: "weight"
+        widget: "number"
+        default: 1
+        valueType: "int"
+        min: 1
+        step: 1
 
       - label: "Publish Date"
         name: "date"
         required: false
         widget: "datetime"
 
-      - label: "Draft"
-        name: "draft"
-        required: false
+      - label: "Links Out"
+        name: "link_out"
         widget: "boolean"
-        default: true
+        default: false
 
-      - label: "Categories"
-        name: "categories"
-        required: false
-        widget: "list"
-
-      - label: "Tags"
-        name: "tags"
-        required: false
-        widget: "list"
-
-      - label: "Keywords"
-        name: "keywords"
-        required: false
-        widget: "list"
-
-      - label: "Auto Thumbnail Image"
-        name: "autoThumbnailImage"
-        required: false
-        widget: "boolean"
-        default: true
-
-      - label: "Thumbnail Image Position"
-        name: "thumbnailImagePosition"
-        required: false
-        widget: "select"
-        options: ["left", "top", "right"]
-
-      - label: "Thumbnail Image"
-        name: "thumbnailImage"
-        required: false
+      - label: "Hero Image"
+        name: "hero_image"
         widget: "image"
-
-      - label: "Cover Image"
-        name: "coverImage"
-        required: false
-        widget: "image"
+        default: "/uploads/projects.png"
+        media_library:
+          config:
+            multiple: false
 
       - label: "Body"
         name: "body"
         widget: "markdown"
+        buttons: ["bold", "italic", "code", "link", "quote", "code-block", "bulleted-list", "numbered-list"]
+
+  - label: "News Items"
+    name: "news"
+    folder: "content/news" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "YYYY-MM-DD-title.md" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: Author, name: author, widget: string}
+      # image
+      - label: "News Item Image"
+        name: "image"
+        widget: "image"
+        default: "/uploads/wherry-seminar-table.jpg"
+        media_library:
+          config:
+            multiple: false
+      # date
+      - label: "Date"
+        name: "date"
+        widget: "date"
+        default: ""
+        format: "YYYY-MM-DD"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        buttons: ["bold", "italic", "code", "link", "quote", "code-block", "bulleted-list", "numbered-list"]
+
+  - label: "Upcoming Events"
+    name: "events"
+    folder: "content/events" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "YYYY-MM-DD-title.md" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: Author, name: author, widget: string}
+      # image
+      - label: "Event Item Image"
+        name: "image"
+        widget: "image"
+        default: "/uploads/wherry-seminar-table.jpg"
+        media_library:
+          config:
+            multiple: false
+      # date
+      - label: "Start Datetime"
+        name: "start_datetime"
+        widget: "datetime"
+        default: ""
+        format: "LLL"
+      - label: "End Datetime"
+        name: "end_datetime"
+        widget: "datetime"
+        default: ""
+        format: "LLL"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        buttons: ["bold", "italic", "code", "link", "quote", "code-block", "bulleted-list", "numbered-list"]
