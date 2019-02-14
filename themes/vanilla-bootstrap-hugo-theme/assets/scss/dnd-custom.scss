@@ -834,8 +834,8 @@ body.about {
       background-size: cover;
       margin-bottom: 6.4rem;
       background-position-x: center;
-      @include media-breakpoint-down(sm) {
-        height: 210px;
+      @include media-breakpoint-up(mmd) {
+        height: 350px;
       }
     }
 
@@ -1231,6 +1231,9 @@ body.type-projects.kind-section {
       background-size: cover;
       margin-bottom: 6.4rem;
       background-position-y: bottom;
+      @include media-breakpoint-up(mmd) {
+        height: 350px;
+      }
     }
 
     h2,
@@ -1351,6 +1354,9 @@ body.type-meetings.kind-section {
       background-repeat: no-repeat;
       background-size: cover;
       margin-bottom: 6.4rem;
+      @include media-breakpoint-up(mmd) {
+        height: 350px;
+      }
     }
   }
 } 

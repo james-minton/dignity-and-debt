@@ -13089,9 +13089,9 @@ body.about .row.jumbotron {
   background-position-x: center;
 }
 
-@media (max-width: 767.98px) {
+@media (min-width: 1024px) {
   body.about .row.jumbotron {
-    height: 210px;
+    height: 350px;
   }
 }
 
@@ -13485,6 +13485,12 @@ body.type-projects.kind-section .row.jumbotron {
   background-position-y: bottom;
 }
 
+@media (min-width: 1024px) {
+  body.type-projects.kind-section .row.jumbotron {
+    height: 350px;
+  }
+}
+
 body.type-projects.kind-section .row h2 {
   font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
   font-size: 3.2rem;
@@ -13589,6 +13595,12 @@ body.type-meetings.kind-section .row.jumbotron {
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 6.4rem;
+}
+
+@media (min-width: 1024px) {
+  body.type-meetings.kind-section .row.jumbotron {
+    height: 350px;
+  }
 }
 
 .news-banner.staytuned {
