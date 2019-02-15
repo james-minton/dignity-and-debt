@@ -113,94 +113,91 @@ collections:
         file: "data/objectives/objective-01.yaml"
         extension: "yaml"
         fields:
-          fields:
-            - label: "Index (zero-based display order)"
-              name: "index"
-              widget: "number"
-              default: 0
-              valueType: "int"
-              min: 0
-              max: 2
-              step: 1
-            - label: "Display Number"
-              name: "display_number"
-              widget: "number"
-              default: 1
-              valueType: "int"
-              min: 1
-              max: 3
-              step: 1
-            - {label: Title, name: title, widget: string}
-            - label: "Icon"
-              name: "image"
-              widget: "image"
-              default: "/uploads/Research_Illustration.png"
-              media_library:
-                config:
-                  multiple: false
-            - {label: blurb, name: blurb, widget: text}
+          - label: "Index (zero-based display order)"
+            name: "index"
+            widget: "number"
+            default: 0
+            valueType: "int"
+            min: 0
+            max: 2
+            step: 1
+          - label: "Display Number"
+            name: "display_number"
+            widget: "number"
+            default: 1
+            valueType: "int"
+            min: 1
+            max: 3
+            step: 1
+          - {label: Title, name: title, widget: string}
+          - label: "Icon"
+            name: "image"
+            widget: "image"
+            default: "/uploads/Research_Illustration.png"
+            media_library:
+              config:
+                multiple: false
+          - {label: blurb, name: blurb, widget: text}
       - name: "objective-02"
         label: "Objective 2"
         file: "data/objectives/objective-02.yaml"
         extension: "yaml"
         fields:
-          fields:
-            - label: "Index (zero-based display order)"
-              name: "index"
-              widget: "number"
-              default: 0
-              valueType: "int"
-              min: 0
-              max: 2
-              step: 1
-            - label: "Display Number"
-              name: "display_number"
-              widget: "number"
-              default: 1
-              valueType: "int"
-              min: 1
-              max: 3
-              step: 1
-            - {label: Title, name: title, widget: string}
-            - label: "Icon"
-              name: "image"
-              widget: "image"
-              default: "/uploads/Research_Illustration.png"
-              media_library:
-                config:
-                  multiple: false
-            - {label: blurb, name: blurb, widget: text}
+          - label: "Index (zero-based display order)"
+            name: "index"
+            widget: "number"
+            default: 0
+            valueType: "int"
+            min: 0
+            max: 2
+            step: 1
+          - label: "Display Number"
+            name: "display_number"
+            widget: "number"
+            default: 1
+            valueType: "int"
+            min: 1
+            max: 3
+            step: 1
+          - {label: Title, name: title, widget: string}
+          - label: "Icon"
+            name: "image"
+            widget: "image"
+            default: "/uploads/Research_Illustration.png"
+            media_library:
+              config:
+                multiple: false
+          - {label: blurb, name: blurb, widget: text}
       - name: "objective-03"
         label: "Objective 3"
         file: "data/objectives/objective-03.yaml"
         extension: "yaml"
         fields:
-          fields:
-            - label: "Index (zero-based display order)"
-              name: "index"
-              widget: "number"
-              default: 0
-              valueType: "int"
-              min: 0
-              max: 2
-              step: 1
-            - label: "Display Number"
-              name: "display_number"
-              widget: "number"
-              default: 1
-              valueType: "int"
-              min: 1
-              max: 3
-              step: 1
-            - {label: Title, name: title, widget: string}
-            - label: "Icon"
-              name: "image"
-              widget: "image"
-              default: "/uploads/Research_Illustration.png"
-              media_library:
-                config:
-                  multiple: false
-            - {label: blurb, name: blurb, widget: text}
+          - label: "Index (zero-based display order)"
+            name: "index"
+            widget: "number"
+            default: 0
+            valueType: "int"
+            min: 0
+            max: 2
+            step: 1
+          - label: "Display Number"
+            name: "display_number"
+            widget: "number"
+            default: 1
+            valueType: "int"
+            min: 1
+            max: 3
+            step: 1
+          - {label: Title, name: title, widget: string}
+          - label: "Icon"
+            name: "image"
+            widget: "image"
+            default: "/uploads/Research_Illustration.png"
+            media_library:
+              config:
+                multiple: false
+          - {label: blurb, name: blurb, widget: text}
   - label: "People"
     name: "people"
     folder: "data/people"
