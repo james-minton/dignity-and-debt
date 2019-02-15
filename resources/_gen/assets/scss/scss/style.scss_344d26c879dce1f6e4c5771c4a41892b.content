@@ -12551,6 +12551,13 @@ img.float-left {
   color: #fff;
 }
 
+.btn-custom svg.fa-external-link-square-alt {
+  width: 13px;
+  position: relative;
+  top: 2px;
+  margin-left: 10px;
+}
+
 @supports (position: sticky) or (position: -webkit-sticky) {
   .sticky-top {
     position: -webkit-sticky;
@@ -13095,6 +13102,12 @@ body.about .row.jumbotron {
   }
 }
 
+@media (min-width: 1280px) {
+  body.about .row.jumbotron {
+    height: 400px;
+  }
+}
+
 body.about .row.about-descr {
   /* @include media-breakpoint-up(md) { */
   margin-top: -100px;
@@ -13491,6 +13504,12 @@ body.type-projects.kind-section .row.jumbotron {
   }
 }
 
+@media (min-width: 1280px) {
+  body.type-projects.kind-section .row.jumbotron {
+    height: 400px;
+  }
+}
+
 body.type-projects.kind-section .row h2 {
   font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
   font-size: 3.2rem;
@@ -13600,6 +13619,12 @@ body.type-meetings.kind-section .row.jumbotron {
 @media (min-width: 1024px) {
   body.type-meetings.kind-section .row.jumbotron {
     height: 350px;
+  }
+}
+
+@media (min-width: 1280px) {
+  body.type-meetings.kind-section .row.jumbotron {
+    height: 400px;
   }
 }
 

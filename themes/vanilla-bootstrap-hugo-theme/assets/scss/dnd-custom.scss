@@ -304,6 +304,12 @@ img {
       // transform: translate(1px, 1px);
       color: #fff;
     }
+    svg.fa-external-link-square-alt {
+      width: 13px;
+      position: relative;
+      top: 2px;
+      margin-left: 10px;
+    }
 }
 
 // Sticky top fix for safari
@@ -834,8 +840,13 @@ body.about {
       background-size: cover;
       margin-bottom: 6.4rem;
       background-position-x: center;
+      
       @include media-breakpoint-up(mmd) {
         height: 350px;
+      }
+      
+      @include media-breakpoint-up(lg) {
+        height: 400px;
       }
     }
 
@@ -1234,6 +1245,9 @@ body.type-projects.kind-section {
       @include media-breakpoint-up(mmd) {
         height: 350px;
       }
+      @include media-breakpoint-up(lg) {
+        height: 400px;
+      }
     }
 
     h2,
@@ -1356,6 +1370,9 @@ body.type-meetings.kind-section {
       margin-bottom: 6.4rem;
       @include media-breakpoint-up(mmd) {
         height: 350px;
+      }
+      @include media-breakpoint-up(lg) {
+        height: 400px;
       }
     }
   }
