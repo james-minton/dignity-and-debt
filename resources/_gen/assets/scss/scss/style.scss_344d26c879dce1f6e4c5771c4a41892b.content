@@ -13122,8 +13122,14 @@ body.about .row.about-descr .col {
 
 body.about .row.about-descr .col h2 {
   font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
-  font-size: 4rem;
+  font-size: 2.8rem;
   text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  body.about .row.about-descr .col h2 {
+    font-size: 4rem;
+  }
 }
 
 body.about .row.about-descr .col p {
@@ -13135,9 +13141,11 @@ body.about .row.about-descr .col p {
 body.about .row.about-objective {
   margin-bottom: 11.6rem;
   display: inline-block;
+  padding-left: 1px;
+  padding-right: 1px;
 }
 
-@media (max-width: 1023.98px) {
+@media (min-width: 768px) {
   body.about .row.about-objective {
     padding-left: 4rem;
     padding-right: 4rem;
@@ -13152,8 +13160,14 @@ body.about .row.about-objective {
 
 body.about .row.about-objective .number span {
   font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
-  font-size: 7rem;
+  font-size: 6rem;
   color: #1C6F81;
+}
+
+@media (min-width: 768px) {
+  body.about .row.about-objective .number span {
+    font-size: 7rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -13165,7 +13179,7 @@ body.about .row.about-objective .number span {
 
 @media (max-width: 767.98px) {
   body.about .row.about-objective .number {
-    width: 35%;
+    width: 31%;
     max-width: 46%;
     /* width: 300px; */
     display: inline-block;
@@ -13177,10 +13191,19 @@ body.about .row.about-objective .number span {
 
 body.about .row.about-objective .descr h3 {
   font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
-  font-size: 2.8rem;
+  font-size: 2.4rem;
+  margin-bottom: 1.6rem;
+  margin-top: 3.2rem;
   line-height: 3.2rem;
   color: #003E62;
   text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  body.about .row.about-objective .descr h3 {
+    font-size: 2.8rem;
+    margin-top: 0;
+  }
 }
 
 body.about .row.about-objective .descr p {
@@ -13260,11 +13283,26 @@ body.about .row.about-people-head {
 
 body.about .row.about-people-head h2 {
   font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
-  font-size: 4rem;
+  font-size: 2.8rem;
   color: #003E62;
   text-transform: uppercase;
   text-align: center;
   width: 100%;
+}
+
+@media (min-width: 768px) {
+  body.about .row.about-people-head h2 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  body.about .row.about-director .col.col-6.offset-3 {
+    max-width: 100%;
+    /* display: block; */
+    flex: 0 0 100%;
+    margin-left: 0;
+  }
 }
 
 body.about .row.about-director .pic {
@@ -13512,10 +13550,16 @@ body.type-projects.kind-section .row.jumbotron {
 
 body.type-projects.kind-section .row h2 {
   font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
-  font-size: 3.2rem;
+  font-size: 2.4rem;
   color: #003E62;
   line-height: 4rem;
   text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  body.type-projects.kind-section .row h2 {
+    font-size: 3.2rem;
+  }
 }
 
 body.type-projects.kind-section .row h2:after {
@@ -13659,10 +13703,16 @@ body.type-meetings.kind-section .row.jumbotron {
 
 .news-banner .column h3 {
   font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
-  font-size: 4rem;
+  font-size: 2.8rem;
   text-transform: uppercase;
   color: #003E62;
   margin-bottom: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  .news-banner .column h3 {
+    font-size: 4rem;
+  }
 }
 
 .news-banner .column span {
@@ -13714,9 +13764,16 @@ body.type-meetings.kind-section .row.jumbotron {
 
 .kind-section.type-meetings .row.the-roundtable .text h3 {
   font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
-  font-size: 4rem;
+  font-size: 2.8rem;
+  margin-bottom: 1.6rem;
   color: #003E62;
   text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .kind-section.type-meetings .row.the-roundtable .text h3 {
+    font-size: 3.2rem;
+  }
 }
 
 .kind-section.type-meetings .row.the-roundtable .text span {
@@ -13731,7 +13788,14 @@ body.type-meetings.kind-section .row.jumbotron {
 }
 
 .kind-section.type-meetings .row.about-roundtable .column h3 {
-  font-size: 4rem;
+  font-size: 2.8rem;
+  margin-bottom: 1.6rem;
+}
+
+@media (min-width: 768px) {
+  .kind-section.type-meetings .row.about-roundtable .column h3 {
+    font-size: 3.2rem;
+  }
 }
 
 .kind-section.type-meetings .row.about-roundtable .column span {
@@ -13773,11 +13837,17 @@ body.type-meetings.kind-section .row.jumbotron {
 
 .kind-section.type-2018-program .row.heading h2 {
   font-family: "BrandonGrotesque-Bold", "Lato", "Helvetica Neue", Arial, sans-serif, -apple-system;
-  font-size: 4rem;
+  font-size: 2.8rem;
   color: #003E62;
   text-align: center;
   width: 100%;
   margin: 5.6rem auto;
+}
+
+@media (min-width: 768px) {
+  .kind-section.type-2018-program .row.heading h2 {
+    font-size: 4rem;
+  }
 }
 
 .kind-section.type-2018-program .row.heading h3 {
