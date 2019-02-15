@@ -1,6 +1,7 @@
 ---
 title: "About"
 type: "about"
+is_index: true
 display_title: "About the Network"
 subtitle: "This is the about page subtitle"
 date: "2019-01-25"
