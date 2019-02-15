@@ -1,68 +1,142 @@
 {{ define "main" }}
 
-<div id="home-jumbotron" class="jumbotron text-center">
-  <h1 tabindex="0">{{ .Site.Title }}</h1>
-  <p class="font-125">{{ .Site.Params.homeText | markdownify }}</p>
-  <h2 tabindex="0">{{ .Page.Params.subtitle }}</h2>
-  <h2 tabindex="0">{{ .Content }}</h2>
+<!--<div class="row about-hero">-->
+  <!--<div class="col  col-lg-7 col-md-8 col-sm-12 offset-lg-6 offset-md-4 offset-sm-0">-->
+    <!--{{ $img := strings.TrimPrefix "/uploads/" .Page.Params.image }}
+    {{ with $.Site.GetPage "page" "uploads/_index.md" }}
+        {{ with .Resources.GetMatch $img }}
+              {{$img102 := .Fill "1484x928 Center"}}
+              <img class="flex-child" src="{{ $img102.RelPermalink }}" width="742" height="464" alt="About page banner image" tabindex="-1">
+        {{ end }}
+    {{ end }}-->
+  <!--</div>-->
+<!--</div>-->
+
+{{ $about_hero_img := strings.TrimPrefix "/uploads/" .Page.Params.hero_image }}
+{{ with $.Site.GetPage "page" "uploads/_index.md" }}
+{{ with .Resources.GetMatch $about_hero_img }}
+{{$about_hero := .Fill "1440x436 BottomRight"}}
+<div id="" class="jumbotron row" style="background-image: url('{{ $about_hero.RelPermalink }}');">
+</div>
+{{ end }}
+{{ end }}
+
+
+<div class="row about-descr">
+  <div class="col col-lg-7 col-md-8 col-sm-12 offset-lg-1 offset-md-1">
+    <h2 tabindex="0">{{ .Page.Params.display_title }}</h2>
+    <p tabindex="0">{{ .Content }}</p>
+  </div>
 </div>
 
-<p style="color:red;">test single OVERRIDE OVERRIDE</p>
+{{ range .Site.Data.objectives }}
+    <div class="row about-objective about-obj-index-{{ .index }}">
+      <div class="col number col-1 offset-lg-1 col-lg-1 offset-md-1 col-md-11 offset-sm-1 col-sm-1">
+        <span tabindex="0">{{ .display_number }}.</span>
+      </div>
+      <div class="col figure col-lg-2 offset-lg-0 col-md-3 offset-md-1 offset-sm-1 col-sm-8">
+        {{ $img := strings.TrimPrefix "/uploads/" .image }}
+        {{ with $.Site.GetPage "page" "uploads/_index.md" }}
+          {{ with .Resources.GetMatch $img }}
+            {{$imgFill := .Fill "324x390 Center"}}
+            <img class="flex-child" src="{{ $imgFill.RelPermalink }}" width="166" height="195" alt="Objective icon" tabindex="-1">
+          {{ end }}
+        {{ end }}
+      </div>
+      <div class="descr col-lg-7 offset-lg-0 col-md-7 offset-md-0 col-sm-10 offset-sm-1">
+        <h3 tabindex="0">{{ .title }}</h3>
+        <p tabindex="0">{{ .blurb }}</p>
+      </div>
+    </div>
+{{ end }}
 
-
-<h3>Objectives</h3>
-<div class="objectives">
-
+<div class="row about-people-head">
+  <h2>Meet the Network</h2>
 </div>
 
-<h3>Meet the Network</h3>
-
-<div class="people">
-  <!-- People data object, sorted by type -->
-{{ range where .Site.Pages "Section" "events"  }}
-  {{ range first 3 (where .Pages "Date.Unix" "gt" now.Unix) }}
-  {{ $dateTime := .PublishDate.Format "2006-01-02" }}
-  {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
-<div>
-    <time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
-  <a class="font-125" href="{{ .Permalink }}">{{ .Title }}</a>
-  <p>{{ .Content }}</p>
-  {{ partial "news-date-and-tags.html" . }}
-</div>
+<div class="row about-director">
+{{ range .Site.Data.people }}
+  {{ if eq .role "director" }}
+  <div class="col col-6 offset-3">
+    <div class="pic">
+      {{ $img := strings.TrimPrefix "/uploads/" .image }}
+      {{ $name := .name }}
+      {{ with $.Site.GetPage "page" "uploads/_index.md" }}
+        {{ with .Resources.GetMatch $img }}
+          {{$imgDir := .Fill "232x232 Center"}}
+          <img class="flex-child" src="/uploads/ffwherry_bio.jpg" width="232" height="232" alt="Director {{ $name }}" tabindex="0">
+        {{ end }}
+      {{ end }}
+    </div>
+    <div class="name">{{ .name }}</div>
+    <div class="title"> {{ .title }}</div>
+    <div class="bio">{{ .blurb }}</div>
+    <div class="morelink-parent">
+      <!-- <a class="btn btn-custom" href="{{ '#' | absURL }}" tabindex="0" aria-label="Go to About">MORE INFO</a> -->
+    </div>
+  </div>
   {{ end }}
 {{ end }}
 </div>
 
-<div class="row sponsors flex-parent">
-  <h3 class="" tabindex="0">Collaboration with</h3>
-  <div class="w-100"></div>
-  <div class="flex-parent">
-    <div class="flex-child org-tile">
-      <a href="" target="_blank" aria-haspopup>
-        <img class="" src="{{ "images/princeton_logo.png" | absURL }}" width="208" height="57" alt="Princeton Unviersity logo">
-      </a>
-    </div>
-    <div class="flex-child org-tile">
-      <a href="" target="_blank" aria-haspopup>
-        <img class="" src="{{ "images/piirs_logo.png" | absURL }}" width="152" height="63" alt="Princeton Institute for International and Regional Studies logo">
-      </a>
-    </div>
-    <div class="flex-child org-tile">
-      <a href="" target="_blank" aria-haspopup>
-        <img class="" src="{{ "images/ssrc_logo.png" | absURL }}" width="175" height="57" alt="Social Science Research Council logo">
-      </a>
-    </div>
-  </div>
-  <div class="w-100"></div>
-  <h3 class="" tabindex="0">Funded by</h3>
-  <div class="w-100"></div>
-  <div class="flex-parent">
-    <div class="flex-child org-tile">
-      <a href="" target="_blank" aria-haspopup>
-        <img class="" src="{{ "images/mc_cig_logo.png" | absURL }}" width="196" height="60" alt="MasterCard Center for Inclusive Growth logo">
-      </a>
-    </div>
-  </div>
+<div class="row about-staff-head">
+  <h3 class="about-staff">RESEARCH STAFF</h3>
 </div>
+
+<div class="row about-staff flex-parent">
+  {{ range .Site.Data.people }}
+    {{ if eq .role "staff" }}
+    <div class="col col-sm-12 col-md-3 col-lg-3 flex-child">
+      <!--<div class="pic">
+        {{ $img := strings.TrimPrefix "/uploads/" .image }}
+        {{ $name := .name }}
+        {{ with $.Site.GetPage "page" "uploads/_index.md" }}
+          {{ with .Resources.GetMatch $img }}
+            {{$imgDir := .Fill "232x232 Center"}}
+            <img class="flex-child" src="{{ $imgDir.RelPermalink }}" width="232" height="232" alt="Director {{ $name }}" tabindex="0">
+          {{ end }}
+        {{ end }}
+      </div>-->
+      <div class="name">{{ .name }}</div>
+      <div class="title"> {{ .title }}</div>
+      <!--<div class="bio" tabindex="-1">{{ .blurb }}</div>
+      <div class="morelink-parent">
+        <button class="btn btn-custom btn-bio" tabindex="0" aria-label="Read bio" data-toggle="modal" data-target="#peopleBioModal">MORE INFO</button>
+      </div>-->
+    </div>
+    {{ end }}
+  {{ end }}
+</div>
+
+<!--<div class="row about-partners-head">
+  <h3 class="about-partners">PARTNERS</h3>
+</div>
+
+<div class="row about-partners flex-parent">
+  {{ range .Site.Data.people }}
+    {{ if eq .role "partner" }}
+    <div class="col col-sm-12 col-md-3 col-lg-3 flex-child">
+      <div class="pic">
+        {{ $img := strings.TrimPrefix "/uploads/" .image }}
+        {{ $name := .name }}
+        {{ with $.Site.GetPage "page" "uploads/_index.md" }}
+          {{ with .Resources.GetMatch $img }}
+            {{$imgDir := .Fill "232x232 Center"}}
+            <img class="flex-child" src="{{ $imgDir.RelPermalink }}" width="232" height="232" alt="Director {{ $name }}" tabindex="0">
+          {{ end }}
+        {{ end }}
+      </div>
+      <div class="name">{{ .name }}</div>
+      <div class="title"> {{ .title }}</div>
+      <div class="bio" tabindex="-1">{{ .blurb }}</div>
+      <div class="morelink-parent">
+        <button class="btn btn-custom btn-bio" tabindex="0" aria-label="Read bio">MORE INFO</button>
+      </div>
+    </div>
+    {{ end }}
+  {{ end }}
+</div>-->
+
+{{ partial "modal" . }}
 
 {{ end }}

@@ -1,0 +1,27 @@
+<div class="flex-parent news-one-col">
+    {{ range where .Site.Pages "Section" "news"  }}
+      {{ range first 1 (where .Pages "Date.Unix" "lt" now.Unix) }}
+      <!-- date setup -->
+      {{ $dateTime := .PublishDate.Format "2006-01-02" }}
+      {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+      <!-- fetch image -->
+      {{ $img := strings.TrimPrefix "/uploads/" .Params.image }}
+      <div class="flex-child event-tile">
+        {{ with $.Site.GetPage "page" "uploads/_index.md" }}
+            {{ with .Resources.GetMatch $img }}
+                  {{$img400 := .Fill "296x185 Center"}}
+                  <div class="news-img-container" style="background-image: url('/uploads/wherry-seminar-table.jpg')"></div>
+            {{ end }}
+        {{ end }}
+        <div class="home-news-item-one">
+            <a class="link-news" href="https://www.princeton.edu/news/2018/05/10/sociologist-wherry-studying-money-and-human-values" tabindex="0">{{ .Title }}</a>
+            <time datetime="{{ $dateTime }}" tabindex="0">{{ .PublishDate.Format $dateFormat }}</time>
+            {{ .Content }}
+            <a class="btn btn-custom" target="_blank" href="{{ "https://www.princeton.edu/news/2018/05/10/sociologist-wherry-studying-money-and-human-values" | absURL }}" tabindex="0" aria-label="Go to news article">READ MORE</a>
+        </div>    
+        <!-- <p tabindex="0">{{ .Content }}</p> -->
+        <!-- {{ partial "news-date-and-tags.html" . }} -->
+      </div>
+      {{ end }}
+    {{ end }}
+    </div>

@@ -1,5 +1,5 @@
 ---
-title: "Excepteur sint occaecat cupidatat non proident"
+title: "Sociologist Wherry"
 date: "2019-01-21"
 author: "Fred Wherry"
 image: "/uploads/wherry-seminar-table.jpg"

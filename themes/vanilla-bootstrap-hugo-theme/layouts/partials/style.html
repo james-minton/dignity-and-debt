@@ -1,89 +1,72 @@
 <style>
+  html {
+    background-color: #fff !important;
+  }
+  body {
+    color: black;
+    background-color: #fff;
+  }
 {{ $img := strings.TrimPrefix "/uploads/" .Page.Params.hero_image }}
 {{ with $.Site.GetPage "page" "uploads/_index.md" }}
   {{ with .Resources.GetMatch $img }}
     /* {{$img1280 := .Fill "1280x640 TopLeft"}} */
     {{$img1440 := .Fill "1440x720 TopLeft"}}
     @media (min-width: 769px) {
-      .home.scroll-top nav {
+      .home .container.parent {
         background-image: url('{{ $img1440.RelPermalink }}');
-        background-color: rgba(10, 61, 95, 0.5) !important;
+        background-color: rgba(10, 61, 95, 0.24) !important;
         background-blend-mode: multiply;
-        background-size: 1440px 720px;
+        background-size: 1440px auto;
+        background-position: 43% 0;
         background-repeat: no-repeat;
       }
     }
     #home-jumbotron {
       background-image: url('{{ $img1440.RelPermalink }}');
-      background-color: rgba(10, 61, 95, 0.5);
-      background-blend-mode: multiply;
-      background-position: 0 -68px;
-      background-size: 1440px 720px;
-      background-repeat: no-repeat;
     }
   {{ end }}
 {{ end }}
-
-
-/* .container {
-  max-width: {{ .Site.Params.containerMaxWidth | default "700px" | safeCSS }};
-}
-#nav a {
-  font-weight: bold;
-  color: inherit;
-}
-#nav a.nav-link-active {
-  background-color: #212529;
-  color: #fff;
-}
-#nav-border {
-  border-bottom: 1px solid #212529;
-}
-#main {
-  margin-top: 1em;
-  margin-bottom: 4em;
+@media (min-width: 769px) {
+  .home .container.parent {
+    background-color: rgba(10, 61, 95, 0.24) !important;
+    background-blend-mode: multiply;
+    background-size: 1440px auto;
+    background-position: 43% 0;
+    background-repeat: no-repeat;
+  }
+  .home.scroll-top nav {
+    background-image: transparent;
+    background-color: transparent !important;
+    box-shadow: none;
+  }
+  .home nav {
+    background-color: rgba(255, 255, 255, 1) !important;
+    -webkit-box-shadow: 0 0 transparent, 0 0 transparent, 0 5px 5px -4px rgba(0, 0, 0, 0.10);
+    -moz-box-shadow: 0 0 transparent, 0 0 transparent, 0 5px 5px -4px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 0 transparent, 0 0 transparent, 0 5px 5px -4px rgba(0, 0, 0, 0.10);
+    transition: background-color 150ms ease-in-out;
+  }
+  .not-home.scroll-top nav {
+    box-shadow: none;
+  }
+  .not-home nav {
+    background-color: rgba(255, 255, 255, 1) !important;
+    -webkit-box-shadow: 0 0 transparent, 0 0 transparent, 0 5px 5px -4px rgba(0, 0, 0, 0.10);
+    -moz-box-shadow: 0 0 transparent, 0 0 transparent, 0 5px 5px -4px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 0 transparent, 0 0 transparent, 0 5px 5px -4px rgba(0, 0, 0, 0.10);
+    transition: none;
+  }
 }
 #home-jumbotron {
-  background-color: inherit;
+  background-color: rgba(10, 61, 95, 0.24);
+  background-blend-mode: multiply;
+  background-position: 43% -68px;
+  background-size: 1440px auto;
+  background-repeat: no-repeat;
 }
-#footer .container {
-  padding: 1em 0;
+@media (max-width: 768px) {
+  #home-jumbotron {
+    background-position: 67% -40px;
+  }
 }
-#footer a {
-  color: inherit;
-  text-decoration: underline;
-}
-.font-125 {
-  font-size: 125%;
-}
-.tag-btn {
-  margin-bottom: 0.3em;
-}
-pre {
-  background-color: #f5f5f5;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 16px;
-}
-pre code {
-  padding: 0;
-  font-size: inherit;
-  color: inherit;
-  background-color: transparent;
-  border-radius: 0;
-}
-code {
-  padding: 2px 4px;
-  font-size: 90%;
-  color: #c7254e;
-  background-color: #f9f2f4;
-  border-radius: 4px;
-}
-img,
-iframe,
-embed,
-video,
-audio {
-  max-width: 100%;
-} */
 </style>
