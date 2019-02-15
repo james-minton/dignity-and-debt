@@ -131,31 +131,35 @@ collections:
     create: false
     identifier_field: name
     fields:
-      - label: "Index (zero-based display order)"
-        name: "index"
-        widget: "number"
-        default: 0
-        valueType: "int"
-        min: 0
-        max: 2
-        step: 1
-      - label: "Display Number"
-        name: "display_number"
-        widget: "number"
-        default: 1
-        valueType: "int"
-        min: 1
-        max: 3
-        step: 1
-      - {label: Title, name: title, widget: string}
-      - label: "Icon"
-        name: "image"
-        widget: "image"
-        default: "/uploads/Research_Illustration.png"
-        media_library:
-          config:
-            multiple: false
-      - {label: blurb, name: blurb, widget: text}
+      - label: "Objective"
+        name: "objective"
+        widget: "list"
+        fields:
+          - label: "Index (zero-based display order)"
+            name: "index"
+            widget: "number"
+            default: 0
+            valueType: "int"
+            min: 0
+            max: 2
+            step: 1
+          - label: "Display Number"
+            name: "display_number"
+            widget: "number"
+            default: 1
+            valueType: "int"
+            min: 1
+            max: 3
+            step: 1
+          - {label: Title, name: title, widget: string}
+          - label: "Icon"
+            name: "image"
+            widget: "image"
+            default: "/uploads/Research_Illustration.png"
+            media_library:
+              config:
+                multiple: false
+          - {label: blurb, name: blurb, widget: text}
   - label: "Project Items"
     name: "projects" # Used in routes, e.g., /admin/collections/blog
     folder: "content/projects" # The path to the folder where the documents are stored
