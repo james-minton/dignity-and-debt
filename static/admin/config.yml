@@ -92,7 +92,7 @@ collections:
                 multiple: false
       - label: "Social Media Metadata"
         name: "social"
-        file: "content/data/social.yaml"
+        file: "data/social.yaml"
         extension: "yaml"
         fields:
           - {label: Social Description, name: social_description, widget: text}
