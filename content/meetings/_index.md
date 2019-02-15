@@ -2,6 +2,7 @@
 title: "Meetings"
 name: "Meetings"
 type: "meetings"
+is_index: true
 hero_image: "/uploads/woman_in_city.jpg"
 roundtable_image: "/uploads/wherry-seminar-table.jpg"
 why_dignity: "Why are we talking about dignity when talking about debt? Autonomy and protection from abuse. Does debt necessarily erode a person’s autonomy as she decides who she is and to behave as is she has a sense of free will? And when debt result from exploitation and abuse? Can we re-imagine a world in which debt does not have to accompany indignity?"

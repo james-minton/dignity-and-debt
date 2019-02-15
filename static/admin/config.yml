@@ -13,7 +13,8 @@ collections:
     files:
       - label: "Home Page"
         name: "home"
-        file: "content/_index.html"
+        file: "content/_index.md"
+        extension: "md"
         fields:
           - {label: Display Title, name: display_title, widget: string}
           - {label: Site Description, name: description, widget: text}
@@ -44,7 +45,8 @@ collections:
                 multiple: false
       - label: "About Page"
         name: "about"
-        file: "content/about/_index.html"
+        file: "content/about/_index.md"
+        extension: "md"
         fields:
           - {label: Display Title, name: display_title, widget: string}
           - {label: Intro, name: intro, widget: text}
@@ -79,7 +81,8 @@ collections:
             buttons: ["bold", "italic", "code", "link", "quote", "code-block", "bulleted-list", "numbered-list"]
       - label: "Projects Page"
         name: "projects"
-        file: "content/projects/_index.html"
+        file: "content/projects/_index.md"
+        extension: "md"
         fields:
           - label: "Hero Image"
             name: "hero_image"
@@ -218,40 +221,10 @@ collections:
         media_library:
           config:
             multiple: false
-  - label: "About Page Objectives"
-    name: "test_objectives"
-    folder: "data/objectives"
-    create: false
-    extension: "yml"
-    fields:
-      - label: "Index (zero-based display order)"
-        name: "index"
-        widget: "number"
-        default: 0
-        valueType: "int"
-        min: 0
-        max: 2
-        step: 1
-      - label: "Display Number"
-        name: "display_number"
-        widget: "number"
-        default: 1
-        valueType: "int"
-        min: 1
-        max: 3
-        step: 1
-      - {label: Title, name: title, widget: string}
-      - label: "Icon"
-        name: "image"
-        widget: "image"
-        default: "/uploads/Research_Illustration.png"
-        media_library:
-          config:
-            multiple: false
-      - {label: blurb, name: blurb, widget: text}
   - label: "Project Items"
     name: "projects" # Used in routes, e.g., /admin/collections/blog
     folder: "content/projects" # The path to the folder where the documents are stored
+    filter: {field: "is_index", value: "false"}
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
