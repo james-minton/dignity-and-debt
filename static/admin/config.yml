@@ -204,7 +204,6 @@ collections:
     name: "people"
     folder: "data/people"
     create: true
-    slug: "person-{{slug}}.yaml"
     fields:
       - {label: Name, name: name, widget: string}
       - {label: title, name: title, widget: string}
